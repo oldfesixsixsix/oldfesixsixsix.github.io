@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>https://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>Nidia666 Site</title>
+    <link>https://oldfesixsixsix.github.io/</link>
+    <description>Recent content on Nidia666 Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
     <lastBuildDate>Tue, 16 Sep 2025 23:00:51 +0800</lastBuildDate>
-    <atom:link href="https://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://oldfesixsixsix.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Page1 - Hugo &#43; GitHub Pages</title>
-      <link>https://example.org/posts/my-new-page1/</link>
+      <link>https://oldfesixsixsix.github.io/posts/my-new-page1/</link>
       <pubDate>Tue, 16 Sep 2025 23:00:51 +0800</pubDate>
-      <guid>https://example.org/posts/my-new-page1/</guid>
+      <guid>https://oldfesixsixsix.github.io/posts/my-new-page1/</guid>
       <description>&lt;h1 id=&#34;1-下載官方-deb建議&#34;&gt;1. 下載官方 .deb（建議）&lt;/h1&gt;
 &lt;p&gt;去 Hugo release
 下載最新 extended 版（一定要 extended，不然 SCSS 會炸）。
@@ -38,9 +38,9 @@ draft: true → 改成 false 才會顯示。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Hello World</title>
-      <link>https://example.org/posts/hello-world/</link>
+      <link>https://oldfesixsixsix.github.io/posts/hello-world/</link>
       <pubDate>Tue, 16 Sep 2025 22:37:34 +0800</pubDate>
-      <guid>https://example.org/posts/hello-world/</guid>
+      <guid>https://oldfesixsixsix.github.io/posts/hello-world/</guid>
       <description></description>
     </item>
   </channel>
