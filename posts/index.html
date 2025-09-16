@@ -134,6 +134,25 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Page1 - Hugo &#43; GitHub Pages
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 下載官方 .deb（建議） 去 Hugo release 下載最新 extended 版（一定要 extended，不然 SCSS 會炸）。 例如：
+wget https://github.com/gohugoio/hugo/releases/download/v0.150.0/hugo_extended_0.156.0_Linux-64bit.tar.gz HTTP request sent, awaiting response... 404 Not Found 2025-09-16 22:38:37 ERROR 404: Not Found. sudo dpkg -i hugo_extended_0.139.0_linux-amd64.deb 下載 v0.150.0 Extended 版本
+前往 Hugo Releases 頁面 ，並下載適用於 Linux 的 Extended 版本。 https://github.com/gohugoio/hugo/releases/tag/v0.150.0
+安裝 Hugo
+在你的 WSL 環境中，執行以下命令來安裝 Hugo：
+tar -xzf hugo_extended_0.150.0_Linux-64bit.tar.gz sudo mv hugo /usr/local/bin/hugo 安裝後檢查：
+hugo version 2. 寫第一篇文章 hugo new posts/hello-world.md 會在 content/posts/ 底下生出一個 md 檔。 draft: true → 改成 false 才會顯示。
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-16 23:00:51 +0800 CST'>September 16, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Page1 - Hugo &#43; GitHub Pages" href="https://example.org/posts/my-new-page1/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Hello World
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
