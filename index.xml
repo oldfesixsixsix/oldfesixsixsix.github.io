@@ -6,8 +6,34 @@
     <description>Recent content on Nidia666 Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Sep 2025 23:00:51 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 16 Sep 2025 23:57:08 +0800</lastBuildDate>
     <atom:link href="https://oldfesixsixsix.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Page2 - Git set SSH Key</title>
+      <link>https://oldfesixsixsix.github.io/posts/my-new-page2/</link>
+      <pubDate>Tue, 16 Sep 2025 23:57:08 +0800</pubDate>
+      <guid>https://oldfesixsixsix.github.io/posts/my-new-page2/</guid>
+      <description>&lt;h1 id=&#34;1-產生新的-ssh-key&#34;&gt;1. 產生新的 SSH Key&lt;/h1&gt;
+&lt;p&gt;建議用比較新的 ed25519 演算法：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-keygen -t ed25519 -C &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your_email@example.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;-C 後面放你的 GitHub email（方便辨識，不影響功能）&lt;/p&gt;
+&lt;p&gt;會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519&lt;/p&gt;
+&lt;h1 id=&#34;2-啟動-ssh-agent-並加-key&#34;&gt;2. 啟動 ssh-agent 並加 key&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;eval &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;ssh-agent -s&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh-add ~/.ssh/id_ed25519
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;3-把-public-key-加到-github&#34;&gt;3. 把 Public Key 加到 GitHub&lt;/h1&gt;
+&lt;p&gt;印出你的 public key：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;cat ~/.ssh/id_ed25519.pub
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。&lt;/p&gt;
+&lt;p&gt;到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。&lt;/p&gt;
+&lt;h1 id=&#34;4-測試連線&#34;&gt;4. 測試連線&lt;/h1&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ssh -T git@github.com
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;第一次會問你是否信任 GitHub，輸入 yes。
+正常會看到：&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Hi your-username! You&amp;#39;ve successfully authenticated, but GitHub does not provide shell access.
+&lt;/code&gt;&lt;/pre&gt;&lt;h1 id=&#34;5-改用-ssh-url-拉專案&#34;&gt;5. 改用 SSH URL 拉專案&lt;/h1&gt;
+&lt;p&gt;下次 clone/pull/push 用 SSH 格式：&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Page1 - Hugo &#43; GitHub Pages</title>
       <link>https://oldfesixsixsix.github.io/posts/my-new-page1/</link>
