@@ -6,8 +6,43 @@
     <description>Recent content on Nidia666 Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 16 Sep 2025 23:57:08 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 18 Sep 2025 22:16:26 +0800</lastBuildDate>
     <atom:link href="https://oldfesixsixsix.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My New Page4</title>
+      <link>https://oldfesixsixsix.github.io/posts/my-new-page4/</link>
+      <pubDate>Thu, 18 Sep 2025 22:16:26 +0800</pubDate>
+      <guid>https://oldfesixsixsix.github.io/posts/my-new-page4/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Page3 - Hugo 新增搜尋頁</title>
+      <link>https://oldfesixsixsix.github.io/posts/my-new-page3/</link>
+      <pubDate>Thu, 18 Sep 2025 21:04:37 +0800</pubDate>
+      <guid>https://oldfesixsixsix.github.io/posts/my-new-page3/</guid>
+      <description>&lt;h1 id=&#34;1-搜尋引擎&#34;&gt;1. 搜尋引擎&lt;/h1&gt;
+&lt;p&gt;預設 PaperMod 是用 Lunr.js。&lt;/p&gt;
+&lt;p&gt;它會去讀 /index.json 來跑全文檢索。&lt;/p&gt;
+&lt;p&gt;index.json 的生成&lt;/p&gt;
+&lt;p&gt;你需要在 config.toml 裡啟用 JSON 輸出：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;outputs&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;home&lt;/span&gt; = [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;HTML&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;RSS&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;JSON&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;這樣 Hugo build 的時候才會輸出 public/index.json。&lt;/p&gt;
+&lt;p&gt;本地測試&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;hugo server -D
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;http://localhost:1313/index.json 要能打開，看到文章 JSON。&lt;/p&gt;
+&lt;h1 id=&#34;2-papermod-搜尋機制&#34;&gt;2. PaperMod 搜尋機制&lt;/h1&gt;
+&lt;p&gt;內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch&lt;/p&gt;
+&lt;p&gt;你在 config.toml（或 hugo.toml）裡開啟：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-toml&#34; data-lang=&#34;toml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;[&lt;span style=&#34;color:#a6e22e&#34;&gt;params&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#a6e22e&#34;&gt;enableSearch&lt;/span&gt; = &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;[params] 是 主題自訂參數。&lt;/p&gt;
+&lt;p&gt;去讀取 /index.json，然後在前端跑全文檢索。&lt;/p&gt;
+&lt;h1 id=&#34;3-查看內建的-js&#34;&gt;3. 查看內建的 JS&lt;/h1&gt;
+&lt;p&gt;PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS + 模板。&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls themes/PaperMod/assets/js/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;新一點的 PaperMod repo 是 fastsearch.js&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Page2 - Git set SSH Key</title>
       <link>https://oldfesixsixsix.github.io/posts/my-new-page2/</link>

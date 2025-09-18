@@ -20,6 +20,7 @@
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
 <link rel="alternate" type="application/rss+xml" href="https://oldfesixsixsix.github.io/index.xml">
+<link rel="alternate" type="application/json" href="https://oldfesixsixsix.github.io/index.json">
 <link rel="alternate" hreflang="en" href="https://oldfesixsixsix.github.io/">
 <noscript>
     <style>
@@ -121,12 +122,66 @@
             </div>
         </div>
         <ul id="menu">
+            <li>
+                <a href="https://oldfesixsixsix.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
         </ul>
     </nav>
 </header>
 <main class="main"> 
 
 <article class="first-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">My New Page4
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p></p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-18 22:16:26 +0800 CST'>September 18, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to My New Page4" href="https://oldfesixsixsix.github.io/posts/my-new-page4/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Page3 - Hugo 新增搜尋頁
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 搜尋引擎 預設 PaperMod 是用 Lunr.js。
+它會去讀 /index.json 來跑全文檢索。
+index.json 的生成
+你需要在 config.toml 裡啟用 JSON 輸出：
+[outputs] home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] 這樣 Hugo build 的時候才會輸出 public/index.json。
+本地測試
+hugo server -D http://localhost:1313/index.json 要能打開，看到文章 JSON。
+2. PaperMod 搜尋機制 內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch
+你在 config.toml（或 hugo.toml）裡開啟：
+[params] enableSearch = true [params] 是 主題自訂參數。
+去讀取 /index.json，然後在前端跑全文檢索。
+3. 查看內建的 JS PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS &#43; 模板。
+ls themes/PaperMod/assets/js/ 新一點的 PaperMod repo 是 fastsearch.js
+...</p>
+  </div>
+  <footer class="entry-footer"><span title='2025-09-18 21:04:37 +0800 CST'>September 18, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to Page3 - Hugo 新增搜尋頁" href="https://oldfesixsixsix.github.io/posts/my-new-page3/"></a>
+</article>
+
+<article class="post-entry"> 
   <header class="entry-header">
     <h2 class="entry-hint-parent">Page2 - Git set SSH Key
     </h2>

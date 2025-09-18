@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="index, follow">
+<title>Page3 - Hugo 新增搜尋頁 | Nidia666 Site</title>
+<meta name="keywords" content="">
+<meta name="description" content="1. 搜尋引擎
+預設 PaperMod 是用 Lunr.js。
+它會去讀 /index.json 來跑全文檢索。
+index.json 的生成
+你需要在 config.toml 裡啟用 JSON 輸出：
+[outputs]
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+這樣 Hugo build 的時候才會輸出 public/index.json。
+本地測試
+hugo server -D
+http://localhost:1313/index.json 要能打開，看到文章 JSON。
+2. PaperMod 搜尋機制
+內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch
+你在 config.toml（或 hugo.toml）裡開啟：
+[params]
+  enableSearch = true
+[params] 是 主題自訂參數。
+去讀取 /index.json，然後在前端跑全文檢索。
+3. 查看內建的 JS
+PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS &#43; 模板。
+ls themes/PaperMod/assets/js/
+新一點的 PaperMod repo 是 fastsearch.js">
+<meta name="author" content="">
+<link rel="canonical" href="https://oldfesixsixsix.github.io/posts/my-new-page3/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.08f7d74f0ada0f975d29ae436285b61ed7a719d05f350cb888d00341642995a2.css" integrity="sha256-CPfXTwraD5ddKa5DYoW2HtenGdBfNQy4iNADQWQplaI=" rel="preload stylesheet" as="style">
+<link rel="icon" href="https://oldfesixsixsix.github.io/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="https://oldfesixsixsix.github.io/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="https://oldfesixsixsix.github.io/favicon-32x32.png">
+<link rel="apple-touch-icon" href="https://oldfesixsixsix.github.io/apple-touch-icon.png">
+<link rel="mask-icon" href="https://oldfesixsixsix.github.io/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="https://oldfesixsixsix.github.io/posts/my-new-page3/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+
+    </style>
+    <style>
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --theme: rgb(29, 30, 32);
+                --entry: rgb(46, 46, 51);
+                --primary: rgb(218, 218, 219);
+                --secondary: rgb(155, 156, 157);
+                --tertiary: rgb(65, 66, 68);
+                --content: rgb(196, 196, 197);
+                --code-block-bg: rgb(46, 46, 51);
+                --code-bg: rgb(55, 56, 62);
+                --border: rgb(51, 51, 51);
+            }
+
+            .list {
+                background: var(--theme);
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
+            }
+
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
+            }
+        }
+
+    </style>
+</noscript><meta property="og:url" content="https://oldfesixsixsix.github.io/posts/my-new-page3/">
+  <meta property="og:site_name" content="Nidia666 Site">
+  <meta property="og:title" content="Page3 - Hugo 新增搜尋頁">
+  <meta property="og:description" content="1. 搜尋引擎 預設 PaperMod 是用 Lunr.js。
+它會去讀 /index.json 來跑全文檢索。
+index.json 的生成
+你需要在 config.toml 裡啟用 JSON 輸出：
+[outputs] home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;] 這樣 Hugo build 的時候才會輸出 public/index.json。
+本地測試
+hugo server -D http://localhost:1313/index.json 要能打開，看到文章 JSON。
+2. PaperMod 搜尋機制 內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch
+你在 config.toml（或 hugo.toml）裡開啟：
+[params] enableSearch = true [params] 是 主題自訂參數。
+去讀取 /index.json，然後在前端跑全文檢索。
+3. 查看內建的 JS PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS &#43; 模板。
+ls themes/PaperMod/assets/js/ 新一點的 PaperMod repo 是 fastsearch.js">
+  <meta property="og:locale" content="en-us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2025-09-18T21:04:37+08:00">
+    <meta property="article:modified_time" content="2025-09-18T21:04:37+08:00">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Page3 - Hugo 新增搜尋頁">
+<meta name="twitter:description" content="1. 搜尋引擎
+預設 PaperMod 是用 Lunr.js。
+它會去讀 /index.json 來跑全文檢索。
+index.json 的生成
+你需要在 config.toml 裡啟用 JSON 輸出：
+[outputs]
+  home = [&#34;HTML&#34;, &#34;RSS&#34;, &#34;JSON&#34;]
+這樣 Hugo build 的時候才會輸出 public/index.json。
+本地測試
+hugo server -D
+http://localhost:1313/index.json 要能打開，看到文章 JSON。
+2. PaperMod 搜尋機制
+內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch
+你在 config.toml（或 hugo.toml）裡開啟：
+[params]
+  enableSearch = true
+[params] 是 主題自訂參數。
+去讀取 /index.json，然後在前端跑全文檢索。
+3. 查看內建的 JS
+PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS &#43; 模板。
+ls themes/PaperMod/assets/js/
+新一點的 PaperMod repo 是 fastsearch.js">
+
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position":  1 ,
+      "name": "Posts",
+      "item": "https://oldfesixsixsix.github.io/posts/"
+    }, 
+    {
+      "@type": "ListItem",
+      "position":  2 ,
+      "name": "Page3 - Hugo 新增搜尋頁",
+      "item": "https://oldfesixsixsix.github.io/posts/my-new-page3/"
+    }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Page3 - Hugo 新增搜尋頁",
+  "name": "Page3 - Hugo 新增搜尋頁",
+  "description": "1. 搜尋引擎 預設 PaperMod 是用 Lunr.js。\n它會去讀 /index.json 來跑全文檢索。\nindex.json 的生成\n你需要在 config.toml 裡啟用 JSON 輸出：\n[outputs] home = [\u0026#34;HTML\u0026#34;, \u0026#34;RSS\u0026#34;, \u0026#34;JSON\u0026#34;] 這樣 Hugo build 的時候才會輸出 public/index.json。\n本地測試\nhugo server -D http://localhost:1313/index.json 要能打開，看到文章 JSON。\n2. PaperMod 搜尋機制 內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch\n你在 config.toml（或 hugo.toml）裡開啟：\n[params] enableSearch = true [params] 是 主題自訂參數。\n去讀取 /index.json，然後在前端跑全文檢索。\n3. 查看內建的 JS PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS + 模板。\nls themes/PaperMod/assets/js/ 新一點的 PaperMod repo 是 fastsearch.js\n",
+  "keywords": [
+    
+  ],
+  "articleBody": "1. 搜尋引擎 預設 PaperMod 是用 Lunr.js。\n它會去讀 /index.json 來跑全文檢索。\nindex.json 的生成\n你需要在 config.toml 裡啟用 JSON 輸出：\n[outputs] home = [\"HTML\", \"RSS\", \"JSON\"] 這樣 Hugo build 的時候才會輸出 public/index.json。\n本地測試\nhugo server -D http://localhost:1313/index.json 要能打開，看到文章 JSON。\n2. PaperMod 搜尋機制 內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch\n你在 config.toml（或 hugo.toml）裡開啟：\n[params] enableSearch = true [params] 是 主題自訂參數。\n去讀取 /index.json，然後在前端跑全文檢索。\n3. 查看內建的 JS PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS + 模板。\nls themes/PaperMod/assets/js/ 新一點的 PaperMod repo 是 fastsearch.js\n這版 PaperMod 有搜尋頁 (search layout)，但不是「右上角放大鏡」的 popup 模式，而是 「跳轉到 /search 頁面」 的設計。\n也就是說：\nfastsearch.js 會在 /search/ 頁面啟動，從 index.json 拉全文索引。\ncat themes/PaperMod/layouts/partials/header.html | grep search header.html 裡的這段：\n$is_search := eq (site.GetPage .KeyName).Layout `search` ",
+  "wordCount" : "158",
+  "inLanguage": "en",
+  "datePublished": "2025-09-18T21:04:37+08:00",
+  "dateModified": "2025-09-18T21:04:37+08:00",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://oldfesixsixsix.github.io/posts/my-new-page3/"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Nidia666 Site",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://oldfesixsixsix.github.io/favicon.ico"
+    }
+  }
+}
+</script>
+</head>
+
+<body class="" id="top">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
+    <nav class="nav">
+        <div class="logo">
+            <a href="https://oldfesixsixsix.github.io/" accesskey="h" title="Nidia666 Site (Alt + H)">Nidia666 Site</a>
+            <div class="logo-switches">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+                    </svg>
+                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round">
+                        <circle cx="12" cy="12" r="5"></circle>
+                        <line x1="12" y1="1" x2="12" y2="3"></line>
+                        <line x1="12" y1="21" x2="12" y2="23"></line>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+                        <line x1="1" y1="12" x2="3" y2="12"></line>
+                        <line x1="21" y1="12" x2="23" y2="12"></line>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="https://oldfesixsixsix.github.io/search/" title="Search (Alt &#43; /)" accesskey=/>
+                    <span>Search</span>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</header>
+<main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      Page3 - Hugo 新增搜尋頁
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h1>
+    <div class="post-meta"><span title='2025-09-18 21:04:37 +0800 CST'>September 18, 2025</span>
+
+</div>
+  </header> 
+  <div class="post-content"><h1 id="1-搜尋引擎">1. 搜尋引擎<a hidden class="anchor" aria-hidden="true" href="#1-搜尋引擎">#</a></h1>
+<p>預設 PaperMod 是用 Lunr.js。</p>
+<p>它會去讀 /index.json 來跑全文檢索。</p>
+<p>index.json 的生成</p>
+<p>你需要在 config.toml 裡啟用 JSON 輸出：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">outputs</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">home</span> = [<span style="color:#e6db74">&#34;HTML&#34;</span>, <span style="color:#e6db74">&#34;RSS&#34;</span>, <span style="color:#e6db74">&#34;JSON&#34;</span>]
+</span></span></code></pre></div><p>這樣 Hugo build 的時候才會輸出 public/index.json。</p>
+<p>本地測試</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo server -D
+</span></span></code></pre></div><p>http://localhost:1313/index.json 要能打開，看到文章 JSON。</p>
+<h1 id="2-papermod-搜尋機制">2. PaperMod 搜尋機制<a hidden class="anchor" aria-hidden="true" href="#2-papermod-搜尋機制">#</a></h1>
+<p>內建支援 Lunr.js 搜尋 但記得要打開 params 裡的 enableSearch</p>
+<p>你在 config.toml（或 hugo.toml）裡開啟：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[<span style="color:#a6e22e">params</span>]
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">enableSearch</span> = <span style="color:#66d9ef">true</span>
+</span></span></code></pre></div><p>[params] 是 主題自訂參數。</p>
+<p>去讀取 /index.json，然後在前端跑全文檢索。</p>
+<h1 id="3-查看內建的-js">3. 查看內建的 JS<a hidden class="anchor" aria-hidden="true" href="#3-查看內建的-js">#</a></h1>
+<p>PaperMod 的搜尋功能不是靠 Hugo 自己魔法出現的，而是靠 主題本身內建的 JS + 模板。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ls themes/PaperMod/assets/js/
+</span></span></code></pre></div><p>新一點的 PaperMod repo 是 fastsearch.js</p>
+<p>這版 PaperMod 有搜尋頁 (search layout)，但不是「右上角放大鏡」的 popup 模式，而是 「跳轉到 /search 頁面」 的設計。</p>
+<p>也就是說：</p>
+<p>fastsearch.js 會在 /search/ 頁面啟動，從 index.json 拉全文索引。</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat themes/PaperMod/layouts/partials/header.html | grep search 
+</span></span></code></pre></div><p>header.html 裡的這段：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$is_search :<span style="color:#f92672">=</span> eq <span style="color:#f92672">(</span>site.GetPage .KeyName<span style="color:#f92672">)</span>.Layout <span style="color:#e6db74">`</span>search<span style="color:#e6db74">`</span>
+</span></span><span style="display:flex;"><span>&lt;a href<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;{{ .URL | absLangURL }}&#34;</span> ...&gt;
+</span></span></code></pre></div><p>表示導航列如果配置了一個「Search」menu item，它就會連到 /search。</p>
+<h1 id="4-新增搜尋頁">4. 新增搜尋頁<a hidden class="anchor" aria-hidden="true" href="#4-新增搜尋頁">#</a></h1>
+<p>在 content/search/_index.md 建立搜尋頁：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new search/_index.md
+</span></span><span style="display:flex;"><span>Content <span style="color:#e6db74">&#34;/mnt/d/myblog/content/search/_index.md&#34;</span> created
+</span></span></code></pre></div><p>編輯內容</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-markdown" data-lang="markdown"><span style="display:flex;"><span>---
+</span></span><span style="display:flex;"><span>title: &#34;Search&#34;
+</span></span><span style="display:flex;"><span>layout: &#34;search&#34;
+</span></span><span style="display:flex;"><span>---
+</span></span></code></pre></div><p>在 config.toml（或 hugo.toml）加一個 menu 指向 /search：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-toml" data-lang="toml"><span style="display:flex;"><span>[[<span style="color:#a6e22e">menu</span>.<span style="color:#a6e22e">main</span>]]
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">identifier</span> = <span style="color:#e6db74">&#34;search&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">name</span> = <span style="color:#e6db74">&#34;Search&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">url</span> = <span style="color:#e6db74">&#34;/search/&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">weight</span> = <span style="color:#ae81ff">10</span>
+</span></span></code></pre></div><p>重新 hugo server -D → 你會在導覽列看到「Search」連結，點進去就是全文檢索頁。</p>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="https://oldfesixsixsix.github.io/">Nidia666 Site</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+<script>
+    document.getElementById("theme-toggle").addEventListener("click", () => {
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
+            localStorage.setItem("pref-theme", 'light');
+        } else {
+            document.body.classList.add('dark');
+            localStorage.setItem("pref-theme", 'dark');
+        }
+    })
+
+</script>
+</body>
+
+</html>
