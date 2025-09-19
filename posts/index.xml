@@ -6,14 +6,46 @@
     <description>Recent content in Posts on Nidia666 Site</description>
     <generator>Hugo -- 0.150.0</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 18 Sep 2025 22:16:26 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 19 Sep 2025 23:11:08 +0800</lastBuildDate>
     <atom:link href="https://oldfesixsixsix.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>My New Page4</title>
+      <title>My New Page5</title>
+      <link>https://oldfesixsixsix.github.io/posts/my-new-page5/</link>
+      <pubDate>Fri, 19 Sep 2025 23:11:08 +0800</pubDate>
+      <guid>https://oldfesixsixsix.github.io/posts/my-new-page5/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Page4 - 下載 YouTube Shorts 轉換成 MP3，進行語音辨識轉文本</title>
       <link>https://oldfesixsixsix.github.io/posts/my-new-page4/</link>
       <pubDate>Thu, 18 Sep 2025 22:16:26 +0800</pubDate>
       <guid>https://oldfesixsixsix.github.io/posts/my-new-page4/</guid>
-      <description></description>
+      <description>&lt;h1 id=&#34;本次目標&#34;&gt;本次目標：&lt;/h1&gt;
+&lt;ol&gt;
+&lt;li&gt;下載 YouTube Shorts 並轉換成 MP3&lt;/li&gt;
+&lt;li&gt;語音辨識 (Speech-to-Text)&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;需先安裝：&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install openai-whisper
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo apt install ffmpeg yt-dlp -y
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h1 id=&#34;openai-whisper&#34;&gt;openai-whisper&lt;/h1&gt;
+&lt;p&gt;Whisper 會在第一次載入時下載語音模型：&lt;/p&gt;
+&lt;p&gt;tiny → 約 74 MB&lt;/p&gt;
+&lt;p&gt;base → 約 142 MB&lt;/p&gt;
+&lt;p&gt;small → 約 466 MB&lt;/p&gt;
+&lt;p&gt;medium → 約 1.5 GB&lt;/p&gt;
+&lt;p&gt;large → 約 1.9 GB&lt;/p&gt;
+&lt;p&gt;openai-whisper 本身 Python 套件不大，只有幾 MB，但它會依賴 PyTorch（torch、torchaudio、torchvision），這些套件通常就有 1GB ~ 2GB 以上&lt;/p&gt;
+&lt;p&gt;本地版這個會安裝超級久，如果只是為了短影片語音辨識可以考慮雲端版&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install -U openai-whisper
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;error: externally-managed-environment
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;× This environment is externally managed
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;╰─&amp;gt; To install Python packages system-wide, try apt install
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    python3-xyz, where xyz is the package you are trying to
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    install.
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;	
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;目前 WSL 的 Python 環境被 Ubuntu “受管理”(externally managed)”。&lt;/p&gt;</description>
     </item>
     <item>
       <title>Page3 - Hugo 新增搜尋頁</title>
