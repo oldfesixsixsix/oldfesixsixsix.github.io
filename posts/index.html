@@ -139,7 +139,7 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">My New Page5
+    <h2 class="entry-hint-parent">My New Page6
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
           <path
@@ -151,8 +151,28 @@
   <div class="entry-content">
     <p></p>
   </div>
+  <footer class="entry-footer"><span title='2025-09-24 22:36:23 +0800 CST'>September 24, 2025</span></footer>
+  <a class="entry-link" aria-label="post link to My New Page6" href="https://oldfesixsixsix.github.io/posts/my-new-page6/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
+    <h2 class="entry-hint-parent">Page5 - lovable clone and deploy to gitpage
+      <span class="entry-hint" title="Draft">
+        <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" fill="currentColor">
+          <path
+            d="M160-410v-60h300v60H160Zm0-165v-60h470v60H160Zm0-165v-60h470v60H160Zm360 580v-123l221-220q9-9 20-13t22-4q12 0 23 4.5t20 13.5l37 37q9 9 13 20t4 22q0 11-4.5 22.5T862.09-380L643-160H520Zm300-263-37-37 37 37ZM580-220h38l121-122-18-19-19-18-122 121v38Zm141-141-19-18 37 37-18-19Z" />
+        </svg>
+      </span>
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>1. 先按照 lovable clone to github 自帶的 README.md 操作 Follow these steps:
+# Step 1: Clone the repository using the project&#39;s Git URL. git clone &lt;YOUR_GIT_URL&gt; # Step 2: Navigate to the project directory. cd &lt;YOUR_PROJECT_NAME&gt; # Step 3: Install the necessary dependencies. npm i # Step 4: Start the development server with auto-reloading and an instant preview. npm run dev npm install ncp --save-dev 2. 路徑調整(非必要) src/App.tsx
+...</p>
+  </div>
   <footer class="entry-footer"><span title='2025-09-19 23:11:08 +0800 CST'>September 19, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to My New Page5" href="https://oldfesixsixsix.github.io/posts/my-new-page5/"></a>
+  <a class="entry-link" aria-label="post link to Page5 - lovable clone and deploy to gitpage" href="https://oldfesixsixsix.github.io/posts/my-new-page5/"></a>
 </article>
 
 <article class="post-entry"> 
@@ -216,22 +236,22 @@ ls themes/PaperMod/assets/js/ 新一點的 PaperMod repo 是 fastsearch.js
 
 <article class="post-entry"> 
   <header class="entry-header">
-    <h2 class="entry-hint-parent">Page2 - Git set SSH Key
+    <h2 class="entry-hint-parent">Page2 - GitHub Setting SSH And GPG keys &amp; TortoiseGit Setting SSH Client
     </h2>
   </header>
   <div class="entry-content">
-    <p>1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：
+    <p>單個專案可適用 1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：
 ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34; -C 後面放你的 GitHub email（方便辨識，不影響功能）
 會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519
-2. 啟動 ssh-agent 並加 key eval &#34;$(ssh-agent -s)&#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：
+2. 啟動 ssh-agent 並加 key use git bash
+eval &#34;$(ssh-agent -s)&#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：
 cat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。
 到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。
 4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：
-Hi your-username! You&#39;ve successfully authenticated, but GitHub does not provide shell access. 5. 改用 SSH URL 拉專案 下次 clone/pull/push 用 SSH 格式：
 ...</p>
   </div>
   <footer class="entry-footer"><span title='2025-09-16 23:57:08 +0800 CST'>September 16, 2025</span></footer>
-  <a class="entry-link" aria-label="post link to Page2 - Git set SSH Key" href="https://oldfesixsixsix.github.io/posts/my-new-page2/"></a>
+  <a class="entry-link" aria-label="post link to Page2 - GitHub Setting SSH And GPG keys & TortoiseGit Setting SSH Client" href="https://oldfesixsixsix.github.io/posts/my-new-page2/"></a>
 </article>
 
 <article class="post-entry"> 

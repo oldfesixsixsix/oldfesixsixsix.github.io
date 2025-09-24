@@ -5,14 +5,16 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>Page2 - Git set SSH Key | Nidia666 Site</title>
+<title>Page2 - GitHub Setting SSH And GPG keys &amp; TortoiseGit Setting SSH Client | Nidia666 Site</title>
 <meta name="keywords" content="">
-<meta name="description" content="1. 產生新的 SSH Key
+<meta name="description" content="單個專案可適用
+1. 產生新的 SSH Key
 建議用比較新的 ed25519 演算法：
 ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
 -C 後面放你的 GitHub email（方便辨識，不影響功能）
 會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519
 2. 啟動 ssh-agent 並加 key
+use git bash
 eval &#34;$(ssh-agent -s)&#34;
 ssh-add ~/.ssh/id_ed25519
 3. 把 Public Key 加到 GitHub
@@ -23,10 +25,7 @@ cat ~/.ssh/id_ed25519.pub
 4. 測試連線
 ssh -T git@github.com
 第一次會問你是否信任 GitHub，輸入 yes。
-正常會看到：
-Hi your-username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-5. 改用 SSH URL 拉專案
-下次 clone/pull/push 用 SSH 格式：">
+正常會看到：">
 <meta name="author" content="">
 <link rel="canonical" href="https://oldfesixsixsix.github.io/posts/my-new-page2/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.08f7d74f0ada0f975d29ae436285b61ed7a719d05f350cb888d00341642995a2.css" integrity="sha256-CPfXTwraD5ddKa5DYoW2HtenGdBfNQy4iNADQWQplaI=" rel="preload stylesheet" as="style">
@@ -76,28 +75,30 @@ Hi your-username! You&#39;ve successfully authenticated, but GitHub does not pro
     </style>
 </noscript><meta property="og:url" content="https://oldfesixsixsix.github.io/posts/my-new-page2/">
   <meta property="og:site_name" content="Nidia666 Site">
-  <meta property="og:title" content="Page2 - Git set SSH Key">
-  <meta property="og:description" content="1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：
+  <meta property="og:title" content="Page2 - GitHub Setting SSH And GPG keys & TortoiseGit Setting SSH Client">
+  <meta property="og:description" content="單個專案可適用 1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：
 ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34; -C 後面放你的 GitHub email（方便辨識，不影響功能）
 會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519
-2. 啟動 ssh-agent 並加 key eval &#34;$(ssh-agent -s)&#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：
+2. 啟動 ssh-agent 並加 key use git bash
+eval &#34;$(ssh-agent -s)&#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：
 cat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。
 到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。
-4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：
-Hi your-username! You&#39;ve successfully authenticated, but GitHub does not provide shell access. 5. 改用 SSH URL 拉專案 下次 clone/pull/push 用 SSH 格式：">
+4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-09-16T23:57:08+08:00">
     <meta property="article:modified_time" content="2025-09-16T23:57:08+08:00">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Page2 - Git set SSH Key">
-<meta name="twitter:description" content="1. 產生新的 SSH Key
+<meta name="twitter:title" content="Page2 - GitHub Setting SSH And GPG keys &amp; TortoiseGit Setting SSH Client">
+<meta name="twitter:description" content="單個專案可適用
+1. 產生新的 SSH Key
 建議用比較新的 ed25519 演算法：
 ssh-keygen -t ed25519 -C &#34;your_email@example.com&#34;
 -C 後面放你的 GitHub email（方便辨識，不影響功能）
 會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519
 2. 啟動 ssh-agent 並加 key
+use git bash
 eval &#34;$(ssh-agent -s)&#34;
 ssh-add ~/.ssh/id_ed25519
 3. 把 Public Key 加到 GitHub
@@ -108,10 +109,7 @@ cat ~/.ssh/id_ed25519.pub
 4. 測試連線
 ssh -T git@github.com
 第一次會問你是否信任 GitHub，輸入 yes。
-正常會看到：
-Hi your-username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-5. 改用 SSH URL 拉專案
-下次 clone/pull/push 用 SSH 格式：">
+正常會看到：">
 
 
 <script type="application/ld+json">
@@ -128,7 +126,7 @@ Hi your-username! You&#39;ve successfully authenticated, but GitHub does not pro
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "Page2 - Git set SSH Key",
+      "name": "Page2 - GitHub Setting SSH And GPG keys \u0026 TortoiseGit Setting SSH Client",
       "item": "https://oldfesixsixsix.github.io/posts/my-new-page2/"
     }
   ]
@@ -138,14 +136,14 @@ Hi your-username! You&#39;ve successfully authenticated, but GitHub does not pro
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "Page2 - Git set SSH Key",
-  "name": "Page2 - Git set SSH Key",
-  "description": "1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：\nssh-keygen -t ed25519 -C \u0026#34;your_email@example.com\u0026#34; -C 後面放你的 GitHub email（方便辨識，不影響功能）\n會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519\n2. 啟動 ssh-agent 並加 key eval \u0026#34;$(ssh-agent -s)\u0026#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：\ncat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。\n到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。\n4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：\nHi your-username! You\u0026#39;ve successfully authenticated, but GitHub does not provide shell access. 5. 改用 SSH URL 拉專案 下次 clone/pull/push 用 SSH 格式：\n",
+  "headline": "Page2 - GitHub Setting SSH And GPG keys \u0026 TortoiseGit Setting SSH Client",
+  "name": "Page2 - GitHub Setting SSH And GPG keys \u0026 TortoiseGit Setting SSH Client",
+  "description": "單個專案可適用 1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：\nssh-keygen -t ed25519 -C \u0026#34;your_email@example.com\u0026#34; -C 後面放你的 GitHub email（方便辨識，不影響功能）\n會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519\n2. 啟動 ssh-agent 並加 key use git bash\neval \u0026#34;$(ssh-agent -s)\u0026#34; ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：\ncat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。\n到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。\n4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：\n",
   "keywords": [
     
   ],
-  "articleBody": "1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：\nssh-keygen -t ed25519 -C \"your_email@example.com\" -C 後面放你的 GitHub email（方便辨識，不影響功能）\n會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519\n2. 啟動 ssh-agent 並加 key eval \"$(ssh-agent -s)\" ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：\ncat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。\n到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。\n4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：\nHi your-username! You've successfully authenticated, but GitHub does not provide shell access. 5. 改用 SSH URL 拉專案 下次 clone/pull/push 用 SSH 格式：\ngit clone git@github.com:oldfesixsixsix/meta-key-vault.git ",
-  "wordCount" : "95",
+  "articleBody": "單個專案可適用 1. 產生新的 SSH Key 建議用比較新的 ed25519 演算法：\nssh-keygen -t ed25519 -C \"your_email@example.com\" -C 後面放你的 GitHub email（方便辨識，不影響功能）\n會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519\n2. 啟動 ssh-agent 並加 key use git bash\neval \"$(ssh-agent -s)\" ssh-add ~/.ssh/id_ed25519 3. 把 Public Key 加到 GitHub 印出你的 public key：\ncat ~/.ssh/id_ed25519.pub 複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。\n到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。\n4. 測試連線 ssh -T git@github.com 第一次會問你是否信任 GitHub，輸入 yes。 正常會看到：\nHi your-username! You've successfully authenticated, but GitHub does not provide shell access. 5. 改用 SSH URL 拉專案 下次 clone/pull/push 用 SSH 格式：\ngit clone git@github.com:oldfesixsixsix/meta-key-vault.git 2025-09-24T22:11:26+08:00\n多個專案 key 管理 1. 產生新的 SSH Key ssh-keygen -t ed25519 -C \"cry_email@example.com\" -f C:\\Users\\e368-\\.ssh\\id_ed25519_user1 系統會問你儲存路徑，建議改名字避免覆蓋原本\n如果要加密，可以設定 passphrase，否則直接 Enter 跳過。\n2. 將 SSH Key 加入 ssh-agent 啟動 agent 並加入 key： 用git bash\neval \"$(ssh-agent -s)\" ssh-add ~/.ssh/id_ed25519_user1 3. 把公鑰加入 GitHub cat ~/.ssh/id_ed25519_user1.pub ssh -T git@github.com 用 ssh -T git@github.com 測試成功的話，這證明了你的 SSH 金鑰在系統層面是有效的，並且能夠正確地與 GitHub 伺服器進行身份驗證。\n4. ssh -T git@github.com 測試時候 GitHub 帳號顯示另個帳號怎麼辦？ 當顯示的帳號不是你當前設置的，而是另一個使用者（Hi user2）。\n要解決這個問題，你需要明確告訴 SSH 客戶端，針對這個專案要使用哪把金鑰。\n在 ~/.ssh/config 中設定 SSH 專案別名 (推薦)\n這是最專業也最乾淨的解決方案。它允許你為不同的 GitHub 專案或帳號設定不同的 SSH 金鑰。\n用記事本或其他編輯器打開 config 檔案，並新增以下內容：\nHost github.com-user1 HostName github.com User git IdentityFile C:\\Users\\username\\.ssh\\id_ed25519_user1 Host github.com-user2 HostName github.com User git IdentityFile C:\\Users\\username\\.ssh\\id_ed25519_user2 Host：這是你為這個 SSH 設定建立的別名。\nIdentityFile：這是指向你私鑰的完整路徑。請將 你的使用者名稱 替換成你的實際帳號名稱。\n更新你的 Git 遠端 URL：\n回到你的專案資料夾，打開 TortoiseGit Settings。在 Git -\u003e Remote 頁面，將你的遠端 URL 更改為：\ngit@sshConfigHost:yourGitHubAccount/yourRepositories.git # 比方說我要 SSH 這個專案 git@github.com:userabc/meta-key-vault.git # 我已經在 userabc 的 GitHub SSH And GPG keys 放了 id_ed25519_user2.pub # 就需要去找到 config 中的 id_ed25519_user2 的 Host git@github.com-user2:userabc/meta-key-vault.git 5. GitHub Settings \u003e SSH And GPG keys \u003e Key is already in use 錯誤訊息 Key is already in use 意味著你正嘗試加入的 SSH 公鑰，已經被綁定到另一個 GitHub 帳號了。\nGitHub 對於 SSH 金鑰的規則是：一把公鑰只能被一個 GitHub 帳號使用。\nTortoiseGit 中 PuTTY 與 OpenSSH 的差異 Setting \u003e Network \u003e SSH Client\nC:\\Windows\\System32\\OpenSSH\\ssh.exe C:\\Program Files\\TortoiseGit\\bin\\TortoiseGitPlink.exe 1. PuTTY 客戶端 (TortoiseGitPlink.exe)： 當你選擇這個客戶端時，你必須在 Git \u003e Remote \u003e origin 的頁面中，\n將 .ppk 格式的私鑰放在 PuTTY Key 欄位。PuTTY 的工具只認這種專屬的 .ppk 格式。\n2. OpenSSH 客戶端 (C:\\Windows\\System32\\OpenSSH\\ssh.exe)： 當你選擇這個客戶端時，你不需要在任何欄位中指定金鑰。\nOpenSSH 有自己的一套金鑰管理規則，\n它會自動到你的 Windows 使用者目錄下的 .ssh 資料夾去尋找私鑰。\n你無法在 TortoiseGit 的設定中指定，也找不到這個選項。\n3. SSH 的權限問題 權限問題跟磁碟槽無關\nSSH 的權限問題通常來自兩個地方：\nSSH 金鑰的設定：TortoiseGit 沒有找到正確的金鑰，或無法使用它。 Git 儲存庫的權限：您的 GitHub 帳號對於該儲存庫沒有讀取（pull）或寫入（push）的權限。 ",
+  "wordCount" : "333",
   "inLanguage": "en",
   "datePublished": "2025-09-16T23:57:08+08:00",
   "dateModified": "2025-09-16T23:57:08+08:00",
@@ -219,34 +217,100 @@ Hi your-username! You&#39;ve successfully authenticated, but GitHub does not pro
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      Page2 - Git set SSH Key
+      Page2 - GitHub Setting SSH And GPG keys &amp; TortoiseGit Setting SSH Client
     </h1>
     <div class="post-meta"><span title='2025-09-16 23:57:08 +0800 CST'>September 16, 2025</span>
 
 </div>
   </header> 
-  <div class="post-content"><h1 id="1-產生新的-ssh-key">1. 產生新的 SSH Key<a hidden class="anchor" aria-hidden="true" href="#1-產生新的-ssh-key">#</a></h1>
+  <div class="post-content"><h1 id="單個專案可適用">單個專案可適用<a hidden class="anchor" aria-hidden="true" href="#單個專案可適用">#</a></h1>
+<h2 id="1-產生新的-ssh-key">1. 產生新的 SSH Key<a hidden class="anchor" aria-hidden="true" href="#1-產生新的-ssh-key">#</a></h2>
 <p>建議用比較新的 ed25519 演算法：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;your_email@example.com&#34;</span>
 </span></span></code></pre></div><p>-C 後面放你的 GitHub email（方便辨識，不影響功能）</p>
 <p>會問你要存哪裡，直接 Enter 就放在 ~/.ssh/id_ed25519</p>
-<h1 id="2-啟動-ssh-agent-並加-key">2. 啟動 ssh-agent 並加 key<a hidden class="anchor" aria-hidden="true" href="#2-啟動-ssh-agent-並加-key">#</a></h1>
+<h2 id="2-啟動-ssh-agent-並加-key">2. 啟動 ssh-agent 並加 key<a hidden class="anchor" aria-hidden="true" href="#2-啟動-ssh-agent-並加-key">#</a></h2>
+<p>use git bash</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ssh-agent -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
 </span></span><span style="display:flex;"><span>ssh-add ~/.ssh/id_ed25519
-</span></span></code></pre></div><h1 id="3-把-public-key-加到-github">3. 把 Public Key 加到 GitHub<a hidden class="anchor" aria-hidden="true" href="#3-把-public-key-加到-github">#</a></h1>
+</span></span></code></pre></div><h2 id="3-把-public-key-加到-github">3. 把 Public Key 加到 GitHub<a hidden class="anchor" aria-hidden="true" href="#3-把-public-key-加到-github">#</a></h2>
 <p>印出你的 public key：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519.pub
 </span></span></code></pre></div><p>複製整串（從 ssh-ed25519 開頭到最後 email 結尾）。</p>
 <p>到 GitHub → Settings → SSH and GPG keys → New SSH key → 貼上。</p>
-<h1 id="4-測試連線">4. 測試連線<a hidden class="anchor" aria-hidden="true" href="#4-測試連線">#</a></h1>
+<h2 id="4-測試連線">4. 測試連線<a hidden class="anchor" aria-hidden="true" href="#4-測試連線">#</a></h2>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com
 </span></span></code></pre></div><p>第一次會問你是否信任 GitHub，輸入 yes。
 正常會看到：</p>
 <pre tabindex="0"><code>Hi your-username! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
-</code></pre><h1 id="5-改用-ssh-url-拉專案">5. 改用 SSH URL 拉專案<a hidden class="anchor" aria-hidden="true" href="#5-改用-ssh-url-拉專案">#</a></h1>
+</code></pre><h2 id="5-改用-ssh-url-拉專案">5. 改用 SSH URL 拉專案<a hidden class="anchor" aria-hidden="true" href="#5-改用-ssh-url-拉專案">#</a></h2>
 <p>下次 clone/pull/push 用 SSH 格式：</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git clone git@github.com:oldfesixsixsix/meta-key-vault.git
-</span></span></code></pre></div>
+</span></span></code></pre></div><p>2025-09-24T22:11:26+08:00</p>
+<h1 id="多個專案-key-管理">多個專案 key 管理<a hidden class="anchor" aria-hidden="true" href="#多個專案-key-管理">#</a></h1>
+<h2 id="1-產生新的-ssh-key-1">1. 產生新的 SSH Key<a hidden class="anchor" aria-hidden="true" href="#1-產生新的-ssh-key-1">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh-keygen -t ed25519 -C <span style="color:#e6db74">&#34;cry_email@example.com&#34;</span> -f C:<span style="color:#ae81ff">\U</span>sers<span style="color:#ae81ff">\e</span>368-<span style="color:#ae81ff">\.</span>ssh<span style="color:#ae81ff">\i</span>d_ed25519_user1
+</span></span></code></pre></div><p>系統會問你儲存路徑，建議改名字避免覆蓋原本</p>
+<p>如果要加密，可以設定 passphrase，否則直接 Enter 跳過。</p>
+<h2 id="2-將-ssh-key-加入-ssh-agent">2. 將 SSH Key 加入 ssh-agent<a hidden class="anchor" aria-hidden="true" href="#2-將-ssh-key-加入-ssh-agent">#</a></h2>
+<p>啟動 agent 並加入 key：
+用git bash</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>eval <span style="color:#e6db74">&#34;</span><span style="color:#66d9ef">$(</span>ssh-agent -s<span style="color:#66d9ef">)</span><span style="color:#e6db74">&#34;</span>
+</span></span><span style="display:flex;"><span>ssh-add ~/.ssh/id_ed25519_user1
+</span></span></code></pre></div><h2 id="3-把公鑰加入-github">3. 把公鑰加入 GitHub<a hidden class="anchor" aria-hidden="true" href="#3-把公鑰加入-github">#</a></h2>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>cat ~/.ssh/id_ed25519_user1.pub
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>ssh -T git@github.com 
+</span></span></code></pre></div><p>用 ssh -T <a href="mailto:git@github.com">git@github.com</a> 測試成功的話，這證明了你的 SSH 金鑰在系統層面是有效的，並且能夠正確地與 GitHub 伺服器進行身份驗證。</p>
+<h2 id="4-ssh--t--測試時候-github-帳號顯示另個帳號怎麼辦">4. ssh -T <a href="mailto:git@github.com">git@github.com</a> 測試時候 GitHub 帳號顯示另個帳號怎麼辦？<a hidden class="anchor" aria-hidden="true" href="#4-ssh--t--測試時候-github-帳號顯示另個帳號怎麼辦">#</a></h2>
+<p>當顯示的帳號不是你當前設置的，而是另一個使用者（Hi user2）。</p>
+<p>要解決這個問題，你需要明確告訴 SSH 客戶端，針對這個專案要使用哪把金鑰。</p>
+<p>在 ~/.ssh/config 中設定 SSH 專案別名 (推薦)</p>
+<p>這是最專業也最乾淨的解決方案。它允許你為不同的 GitHub 專案或帳號設定不同的 SSH 金鑰。</p>
+<p>用記事本或其他編輯器打開 config 檔案，並新增以下內容：</p>
+<pre tabindex="0"><code class="language-Ini," data-lang="Ini,">Host github.com-user1
+    HostName github.com
+    User git
+    IdentityFile C:\Users\username\.ssh\id_ed25519_user1
+
+Host github.com-user2
+    HostName github.com
+    User git
+    IdentityFile C:\Users\username\.ssh\id_ed25519_user2
+</code></pre><p>Host：這是你為這個 SSH 設定建立的別名。</p>
+<p>IdentityFile：這是指向你私鑰的完整路徑。請將 你的使用者名稱 替換成你的實際帳號名稱。</p>
+<p>更新你的 Git 遠端 URL：</p>
+<p>回到你的專案資料夾，打開 TortoiseGit Settings。在 Git -&gt; Remote 頁面，將你的遠端 URL 更改為：</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git@sshConfigHost:yourGitHubAccount/yourRepositories.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 比方說我要 SSH 這個專案</span>
+</span></span><span style="display:flex;"><span>git@github.com:userabc/meta-key-vault.git
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 我已經在 userabc 的 GitHub SSH And GPG keys 放了 id_ed25519_user2.pub</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># 就需要去找到 config 中的 id_ed25519_user2 的 Host</span>
+</span></span><span style="display:flex;"><span>git@github.com-user2:userabc/meta-key-vault.git
+</span></span></code></pre></div><h2 id="5-github-settings--ssh-and-gpg-keys--key-is-already-in-use">5. GitHub Settings &gt; SSH And GPG keys &gt; Key is already in use<a hidden class="anchor" aria-hidden="true" href="#5-github-settings--ssh-and-gpg-keys--key-is-already-in-use">#</a></h2>
+<p>錯誤訊息 Key is already in use 意味著你正嘗試加入的 SSH 公鑰，已經被綁定到另一個 GitHub 帳號了。</p>
+<p>GitHub 對於 SSH 金鑰的規則是：一把公鑰只能被一個 GitHub 帳號使用。</p>
+<h1 id="tortoisegit-中-putty-與-openssh-的差異">TortoiseGit 中 PuTTY 與 OpenSSH 的差異<a hidden class="anchor" aria-hidden="true" href="#tortoisegit-中-putty-與-openssh-的差異">#</a></h1>
+<p>Setting &gt; Network &gt;  SSH Client</p>
+<pre tabindex="0"><code>C:\Windows\System32\OpenSSH\ssh.exe
+C:\Program Files\TortoiseGit\bin\TortoiseGitPlink.exe
+</code></pre><h2 id="1-putty-客戶端-tortoisegitplinkexe">1. PuTTY 客戶端 (TortoiseGitPlink.exe)：<a hidden class="anchor" aria-hidden="true" href="#1-putty-客戶端-tortoisegitplinkexe">#</a></h2>
+<p>當你選擇這個客戶端時，你必須在 Git &gt; Remote &gt; origin 的頁面中，</p>
+<p>將 .ppk 格式的私鑰放在 PuTTY Key 欄位。PuTTY 的工具只認這種專屬的 .ppk 格式。</p>
+<h2 id="2-openssh-客戶端-cwindowssystem32opensshsshexe">2. OpenSSH 客戶端 (C:\Windows\System32\OpenSSH\ssh.exe)：<a hidden class="anchor" aria-hidden="true" href="#2-openssh-客戶端-cwindowssystem32opensshsshexe">#</a></h2>
+<p>當你選擇這個客戶端時，你不需要在任何欄位中指定金鑰。</p>
+<p>OpenSSH 有自己的一套金鑰管理規則，</p>
+<p>它會自動到你的 Windows 使用者目錄下的 .ssh 資料夾去尋找私鑰。</p>
+<p>你無法在 TortoiseGit 的設定中指定，也找不到這個選項。</p>
+<h2 id="3-ssh-的權限問題">3. SSH 的權限問題<a hidden class="anchor" aria-hidden="true" href="#3-ssh-的權限問題">#</a></h2>
+<p>權限問題跟磁碟槽無關</p>
+<p>SSH 的權限問題通常來自兩個地方：</p>
+<ol>
+<li>SSH 金鑰的設定：TortoiseGit 沒有找到正確的金鑰，或無法使用它。</li>
+<li>Git 儲存庫的權限：您的 GitHub 帳號對於該儲存庫沒有讀取（pull）或寫入（push）的權限。</li>
+</ol>
+
 
   </div>
 

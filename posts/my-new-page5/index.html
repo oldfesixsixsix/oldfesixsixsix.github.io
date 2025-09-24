@@ -5,9 +5,24 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta name="robots" content="index, follow">
-<title>My New Page5 | Nidia666 Site</title>
+<title>Page5 - lovable clone and deploy to gitpage | Nidia666 Site</title>
 <meta name="keywords" content="">
-<meta name="description" content="My New Page5 - Nidia666 Site">
+<meta name="description" content="1. 先按照 lovable clone to github 自帶的 README.md 操作
+Follow these steps:
+# Step 1: Clone the repository using the project&#39;s Git URL.
+git clone &lt;YOUR_GIT_URL&gt;
+
+# Step 2: Navigate to the project directory.
+cd &lt;YOUR_PROJECT_NAME&gt;
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+npm install ncp --save-dev
+2. 路徑調整(非必要)
+src/App.tsx">
 <meta name="author" content="">
 <link rel="canonical" href="https://oldfesixsixsix.github.io/posts/my-new-page5/">
 <link crossorigin="anonymous" href="/assets/css/stylesheet.08f7d74f0ada0f975d29ae436285b61ed7a719d05f350cb888d00341642995a2.css" integrity="sha256-CPfXTwraD5ddKa5DYoW2HtenGdBfNQy4iNADQWQplaI=" rel="preload stylesheet" as="style">
@@ -57,15 +72,32 @@
     </style>
 </noscript><meta property="og:url" content="https://oldfesixsixsix.github.io/posts/my-new-page5/">
   <meta property="og:site_name" content="Nidia666 Site">
-  <meta property="og:title" content="My New Page5">
+  <meta property="og:title" content="Page5 - lovable clone and deploy to gitpage">
+  <meta property="og:description" content="1. 先按照 lovable clone to github 自帶的 README.md 操作 Follow these steps:
+# Step 1: Clone the repository using the project&#39;s Git URL. git clone &lt;YOUR_GIT_URL&gt; # Step 2: Navigate to the project directory. cd &lt;YOUR_PROJECT_NAME&gt; # Step 3: Install the necessary dependencies. npm i # Step 4: Start the development server with auto-reloading and an instant preview. npm run dev npm install ncp --save-dev 2. 路徑調整(非必要) src/App.tsx">
   <meta property="og:locale" content="en-us">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2025-09-19T23:11:08+08:00">
     <meta property="article:modified_time" content="2025-09-19T23:11:08+08:00">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="My New Page5">
-<meta name="twitter:description" content="">
+<meta name="twitter:title" content="Page5 - lovable clone and deploy to gitpage">
+<meta name="twitter:description" content="1. 先按照 lovable clone to github 自帶的 README.md 操作
+Follow these steps:
+# Step 1: Clone the repository using the project&#39;s Git URL.
+git clone &lt;YOUR_GIT_URL&gt;
+
+# Step 2: Navigate to the project directory.
+cd &lt;YOUR_PROJECT_NAME&gt;
+
+# Step 3: Install the necessary dependencies.
+npm i
+
+# Step 4: Start the development server with auto-reloading and an instant preview.
+npm run dev
+npm install ncp --save-dev
+2. 路徑調整(非必要)
+src/App.tsx">
 
 
 <script type="application/ld+json">
@@ -82,7 +114,7 @@
     {
       "@type": "ListItem",
       "position":  2 ,
-      "name": "My New Page5",
+      "name": "Page5 - lovable clone and deploy to gitpage",
       "item": "https://oldfesixsixsix.github.io/posts/my-new-page5/"
     }
   ]
@@ -92,14 +124,14 @@
 {
   "@context": "https://schema.org",
   "@type": "BlogPosting",
-  "headline": "My New Page5",
-  "name": "My New Page5",
-  "description": "",
+  "headline": "Page5 - lovable clone and deploy to gitpage",
+  "name": "Page5 - lovable clone and deploy to gitpage",
+  "description": "1. 先按照 lovable clone to github 自帶的 README.md 操作 Follow these steps:\n# Step 1: Clone the repository using the project\u0026#39;s Git URL. git clone \u0026lt;YOUR_GIT_URL\u0026gt; # Step 2: Navigate to the project directory. cd \u0026lt;YOUR_PROJECT_NAME\u0026gt; # Step 3: Install the necessary dependencies. npm i # Step 4: Start the development server with auto-reloading and an instant preview. npm run dev npm install ncp --save-dev 2. 路徑調整(非必要) src/App.tsx\n",
   "keywords": [
     
   ],
-  "articleBody": "",
-  "wordCount" : "0",
+  "articleBody": "1. 先按照 lovable clone to github 自帶的 README.md 操作 Follow these steps:\n# Step 1: Clone the repository using the project's Git URL. git clone # Step 2: Navigate to the project directory. cd # Step 3: Install the necessary dependencies. npm i # Step 4: Start the development server with auto-reloading and an instant preview. npm run dev npm install ncp --save-dev 2. 路徑調整(非必要) src/App.tsx\n標籤調整 BrowserRouter -\u003e HashRouter\nvite.config.ts\nexport default defineConfig(({ mode }) =\u003e ({ base: \"/page1/\", 3. 一鍵打包 複製到指定路徑下\nnpm run deploy package.json\n\"scripts\": { \"dev\": \"vite\", \"build\": \"vite build\", \"build:dev\": \"vite build --mode development\", \"lint\": \"eslint .\", \"preview\": \"vite preview\", \"deploy\": \"ncp dist D:/workspace1/username/repo1\" }, 複製到指定路徑下 並且將該路徑下檔案推送\n\"scripts\": { \"dev\": \"vite\", \"build\": \"vite build\", \"build:dev\": \"vite build --mode development\", \"lint\": \"eslint .\", \"preview\": \"vite preview\", \"deploy\": \"ncp dist D:/workspace1/username/repo1 \u0026\u0026 cd D:/workspace1/username/repo1 \u0026\u0026 git add . \u0026\u0026 git commit -m \\\"Update repo1 build\\\" \u0026\u0026 git push\" }, commit message error\nerror: pathspec 'repo1' did not match any file(s) known to git error: pathspec 'build'' did not match any file(s) known to git 這代表 commit 訊息有問題，記得是用 \"將訊息包起來\n",
+  "wordCount" : "183",
   "inLanguage": "en",
   "datePublished": "2025-09-19T23:11:08+08:00",
   "dateModified": "2025-09-19T23:11:08+08:00",
@@ -173,7 +205,7 @@
   <header class="post-header">
     
     <h1 class="post-title entry-hint-parent">
-      My New Page5
+      Page5 - lovable clone and deploy to gitpage
       <span class="entry-hint" title="Draft">
         <svg xmlns="http://www.w3.org/2000/svg" height="35" viewBox="0 -960 960 960" fill="currentColor">
           <path
@@ -185,6 +217,59 @@
 
 </div>
   </header> 
+  <div class="post-content"><h1 id="1-先按照-lovable-clone-to-github-自帶的-readmemd-操作">1. 先按照 lovable clone to github 自帶的 README.md 操作<a hidden class="anchor" aria-hidden="true" href="#1-先按照-lovable-clone-to-github-自帶的-readmemd-操作">#</a></h1>
+<p>Follow these steps:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Step 1: Clone the repository using the project&#39;s Git URL.</span>
+</span></span><span style="display:flex;"><span>git clone &lt;YOUR_GIT_URL&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 2: Navigate to the project directory.</span>
+</span></span><span style="display:flex;"><span>cd &lt;YOUR_PROJECT_NAME&gt;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 3: Install the necessary dependencies.</span>
+</span></span><span style="display:flex;"><span>npm i
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Step 4: Start the development server with auto-reloading and an instant preview.</span>
+</span></span><span style="display:flex;"><span>npm run dev
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install ncp --save-dev
+</span></span></code></pre></div><h1 id="2-路徑調整非必要">2. 路徑調整(非必要)<a hidden class="anchor" aria-hidden="true" href="#2-路徑調整非必要">#</a></h1>
+<p>src/App.tsx</p>
+<p>標籤調整 BrowserRouter -&gt; HashRouter</p>
+<p>vite.config.ts</p>
+<pre tabindex="0"><code>export default defineConfig(({ mode }) =&gt; ({
+  base: &#34;/page1/&#34;,
+</code></pre><h2 id="3-一鍵打包">3. 一鍵打包<a hidden class="anchor" aria-hidden="true" href="#3-一鍵打包">#</a></h2>
+<p>複製到指定路徑下</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm run deploy
+</span></span></code></pre></div><p>package.json</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span> <span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;vite&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;vite build&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build:dev&#34;</span>: <span style="color:#e6db74">&#34;vite build --mode development&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;lint&#34;</span>: <span style="color:#e6db74">&#34;eslint .&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;preview&#34;</span>: <span style="color:#e6db74">&#34;vite preview&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;ncp dist D:/workspace1/username/repo1&#34;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#960050;background-color:#1e0010">,</span>  
+</span></span></code></pre></div><p>複製到指定路徑下
+並且將該路徑下檔案推送</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span><span style="color:#e6db74">&#34;scripts&#34;</span><span style="color:#960050;background-color:#1e0010">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;dev&#34;</span>: <span style="color:#e6db74">&#34;vite&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build&#34;</span>: <span style="color:#e6db74">&#34;vite build&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;build:dev&#34;</span>: <span style="color:#e6db74">&#34;vite build --mode development&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;lint&#34;</span>: <span style="color:#e6db74">&#34;eslint .&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;preview&#34;</span>: <span style="color:#e6db74">&#34;vite preview&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;deploy&#34;</span>: <span style="color:#e6db74">&#34;ncp dist D:/workspace1/username/repo1 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&amp;&amp; cd D:/workspace1/username/repo1 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&amp;&amp; git add . 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&amp;&amp; git commit -m \&#34;Update repo1 build\&#34; 
+</span></span></span><span style="display:flex;"><span><span style="color:#e6db74">	&amp;&amp; git push&#34;</span>
+</span></span><span style="display:flex;"><span>  }<span style="color:#960050;background-color:#1e0010">,</span>
+</span></span></code></pre></div><p>commit message error</p>
+<pre tabindex="0"><code>error: pathspec &#39;repo1&#39; did not match any file(s) known to git
+error: pathspec &#39;build&#39;&#39; did not match any file(s) known to git
+</code></pre><p>這代表 commit 訊息有問題，記得是用 &quot;將訊息包起來</p>
+
+
+  </div>
 
   <footer class="post-footer">
     <ul class="post-tags">
