@@ -1,0 +1,1 @@
+"use strict";(globalThis.webpackChunkmy_website=globalThis.webpackChunkmy_website||[]).push([[472],{5513:e=>{e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"music share","permalink":"/blog/music-share","unlisted":false,"date":"2025-11-05T15:18:43.984Z"},{"title":"sposts","permalink":"/blog/sports","unlisted":false,"date":"2025-10-24T08:49:11.748Z"}]}')}}]);

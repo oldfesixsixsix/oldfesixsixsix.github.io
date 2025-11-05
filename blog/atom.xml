@@ -2,41 +2,69 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://your-docusaurus-site.example.com/blog</id>
     <title>Throwing it into the water, there was a splash. Blog</title>
-    <updated>2025-10-24T09:08:41.000Z</updated>
+    <updated>2025-11-05T15:18:43.984Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://your-docusaurus-site.example.com/blog"/>
     <subtitle>Throwing it into the water, there was a splash. Blog</subtitle>
     <icon>https://your-docusaurus-site.example.com/img/favicon.ico</icon>
     <entry>
-        <title type="html"><![CDATA[運動]]></title>
-        <id>https://your-docusaurus-site.example.com/blog/hello-world</id>
-        <link href="https://your-docusaurus-site.example.com/blog/hello-world"/>
-        <updated>2025-10-24T09:08:41.000Z</updated>
+        <title type="html"><![CDATA[music share]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/music-share</id>
+        <link href="https://your-docusaurus-site.example.com/blog/music-share"/>
+        <updated>2025-11-05T15:18:43.984Z</updated>
+        <summary type="html"><![CDATA[BGM]]></summary>
+        <content type="html"><![CDATA[<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="bgm">BGM<a href="https://your-docusaurus-site.example.com/blog/music-share#bgm" class="hash-link" aria-label="Direct link to BGM" title="Direct link to BGM" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ragnarok-online">Ragnarok Online<a href="https://your-docusaurus-site.example.com/blog/music-share#ragnarok-online" class="hash-link" aria-label="Direct link to Ragnarok Online" title="Direct link to Ragnarok Online" translate="no">​</a></h3>
+<p>OST 31: Brassy Road<br>
+<a href="https://www.youtube.com/watch?v=Tzo0DZftIhs" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=Tzo0DZftIhs</a></p>
+<p>OST 34 Pampas Upas<br>
+<a href="https://www.youtube.com/watch?v=GqsIWd0bjeE" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=GqsIWd0bjeE</a></p>
+<p>OST 35: TeMPoison<br>
+<a href="https://www.youtube.com/watch?v=TsH8_GJrnCI" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=TsH8_GJrnCI</a></p>
+<p>OST 39: Theme of Al de Baran<br>
+<a href="https://www.youtube.com/watch?v=ekJqpWbI09M" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=ekJqpWbI09M</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="instrumental">Instrumental<a href="https://your-docusaurus-site.example.com/blog/music-share#instrumental" class="hash-link" aria-label="Direct link to Instrumental" title="Direct link to Instrumental" translate="no">​</a></h2>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="eg">EG<a href="https://your-docusaurus-site.example.com/blog/music-share#eg" class="hash-link" aria-label="Direct link to EG" title="Direct link to EG" translate="no">​</a></h3>
+<p>Greg Howe - Introspection (1993) [Full Album]<br>
+<a href="https://www.youtube.com/watch?v=fZKXMNvNX00" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=fZKXMNvNX00</a></p>
+<p>Erotic Cakes - Wonderful Slippery Thing [HQ]<br>
+<a href="https://www.youtube.com/watch?v=QRMwO08lPuI" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=QRMwO08lPuI</a></p>
+<h3 class="anchor anchorTargetStickyNavbar_Vzrq" id="ag">AG<a href="https://your-docusaurus-site.example.com/blog/music-share#ag" class="hash-link" aria-label="Direct link to AG" title="Direct link to AG" translate="no">​</a></h3>
+<p>Vocaloid medley1 arranged on Acoustic Guitar by Osamuraisan [Working BGM]<br>
+<a href="https://www.youtube.com/watch?v=JpMTS_PM1ws" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=JpMTS_PM1ws</a></p>
+<h2 class="anchor anchorTargetStickyNavbar_Vzrq" id="vocal">Vocal<a href="https://your-docusaurus-site.example.com/blog/music-share#vocal" class="hash-link" aria-label="Direct link to Vocal" title="Direct link to Vocal" translate="no">​</a></h2>
+<p>Honeycraft - Outsider (Lyric Video)<br>
+<a href="https://www.youtube.com/watch?v=xYRuwaaUrLY" target="_blank" rel="noopener noreferrer" class="">https://www.youtube.com/watch?v=xYRuwaaUrLY</a></p>]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[sposts]]></title>
+        <id>https://your-docusaurus-site.example.com/blog/sports</id>
+        <link href="https://your-docusaurus-site.example.com/blog/sports"/>
+        <updated>2025-10-24T08:49:11.748Z</updated>
         <summary type="html"><![CDATA[公園訓練]]></summary>
-        <content type="html"><![CDATA[<p>公園訓練</p>
-<p><a href="https://www.instagram.com/reel/DGZrI9JShMa/?igsh=NnF6c3pqano3NjJk" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DGZrI9JShMa/?igsh=NnF6c3pqano3NjJk</a></p>
-<p>臉部</p>
-<p><a href="https://www.instagram.com/reel/DIJbukQBtPy/?igsh=NHA3MWl5bXRoaHg1" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DIJbukQBtPy/?igsh=NHA3MWl5bXRoaHg1</a></p>
-<p>頸部</p>
-<p><a href="https://www.instagram.com/reel/C78XIvsyH6D/?igsh=dGtvMGg2MDRkaGJn" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C78XIvsyH6D/?igsh=dGtvMGg2MDRkaGJn</a></p>
-<p>肩頸</p>
-<p><a href="https://www.instagram.com/reel/DOJBci4kTvg/?igsh=djEwODBkOHhrbmhm" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DOJBci4kTvg/?igsh=djEwODBkOHhrbmhm</a></p>
-<p>小臂</p>
-<p><a href="https://www.instagram.com/reel/C9XZurIMaKO/?igsh=b3hrNWNlbnVybm90" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C9XZurIMaKO/?igsh=b3hrNWNlbnVybm90</a></p>
-<p>徒手訓練</p>
-<p><a href="https://www.instagram.com/reel/DP8d4KoEvuJ/?igsh=OWl1aGJxc3U3dm14" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DP8d4KoEvuJ/?igsh=OWl1aGJxc3U3dm14</a></p>
-<p>核心</p>
-<p><a href="https://www.instagram.com/reel/C-p_ZFoO0kw/?igsh=OTdlNmpmaDlubXdo" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C-p_ZFoO0kw/?igsh=OTdlNmpmaDlubXdo</a>
+        <content type="html"><![CDATA[<p>公園訓練<br>
+<a href="https://www.instagram.com/reel/DGZrI9JShMa/?igsh=NnF6c3pqano3NjJk" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DGZrI9JShMa/?igsh=NnF6c3pqano3NjJk</a></p>
+<p>臉部<br>
+<a href="https://www.instagram.com/reel/DIJbukQBtPy/?igsh=NHA3MWl5bXRoaHg1" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DIJbukQBtPy/?igsh=NHA3MWl5bXRoaHg1</a></p>
+<p>頸部<br>
+<a href="https://www.instagram.com/reel/C78XIvsyH6D/?igsh=dGtvMGg2MDRkaGJn" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C78XIvsyH6D/?igsh=dGtvMGg2MDRkaGJn</a></p>
+<p>肩頸<br>
+<a href="https://www.instagram.com/reel/DOJBci4kTvg/?igsh=djEwODBkOHhrbmhm" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DOJBci4kTvg/?igsh=djEwODBkOHhrbmhm</a></p>
+<p>小臂<br>
+<a href="https://www.instagram.com/reel/C9XZurIMaKO/?igsh=b3hrNWNlbnVybm90" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C9XZurIMaKO/?igsh=b3hrNWNlbnVybm90</a></p>
+<p>徒手訓練<br><a href="https://www.instagram.com/reel/DP8d4KoEvuJ/?igsh=OWl1aGJxc3U3dm14" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DP8d4KoEvuJ/?igsh=OWl1aGJxc3U3dm14</a></p>
+<p>核心<br>
+<a href="https://www.instagram.com/reel/C-p_ZFoO0kw/?igsh=OTdlNmpmaDlubXdo" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C-p_ZFoO0kw/?igsh=OTdlNmpmaDlubXdo</a>
 <a href="https://www.instagram.com/reel/DEzUFr2St0c/?igsh=MWJrM2U1aHVyZHVueg==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DEzUFr2St0c/?igsh=MWJrM2U1aHVyZHVueg==</a>
 <a href="https://www.instagram.com/reel/DK_QtJqqVFN/?igsh=Z2F0NnM3eGdlMzcz" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DK_QtJqqVFN/?igsh=Z2F0NnM3eGdlMzcz</a>
 <a href="https://www.instagram.com/reel/DMrDfB2iqpt/?igsh=MXc2NGhwZm9zMnl1Zg==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DMrDfB2iqpt/?igsh=MXc2NGhwZm9zMnl1Zg==</a>
 <a href="https://www.instagram.com/reel/DBlyZYaPvMY/?igsh=cW15MzBidmZncm9u" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/DBlyZYaPvMY/?igsh=cW15MzBidmZncm9u</a></p>
-<p>進階核心</p>
-<p><a href="https://www.instagram.com/reel/C7uK_nAARi7/?igsh=MTRubHpqN2o0M3NlZg==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C7uK_nAARi7/?igsh=MTRubHpqN2o0M3NlZg==</a></p>
-<p>凱格爾</p>
-<p><a href="https://www.instagram.com/reel/C8O5-nYyJHj/?igsh=MWNvYjkzbHJjc2hhaA==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C8O5-nYyJHj/?igsh=MWNvYjkzbHJjc2hhaA==</a></p>
-<p>伸展類型</p>
-<p><a href="https://www.instagram.com/reel/C6_QvyfSfRO/?igsh=MWl3cmY4eTJoNnZhcw==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C6_QvyfSfRO/?igsh=MWl3cmY4eTJoNnZhcw==</a>
+<p>進階核心<br>
+<a href="https://www.instagram.com/reel/C7uK_nAARi7/?igsh=MTRubHpqN2o0M3NlZg==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C7uK_nAARi7/?igsh=MTRubHpqN2o0M3NlZg==</a></p>
+<p>凱格爾<br>
+<a href="https://www.instagram.com/reel/C8O5-nYyJHj/?igsh=MWNvYjkzbHJjc2hhaA==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C8O5-nYyJHj/?igsh=MWNvYjkzbHJjc2hhaA==</a></p>
+<p>伸展類型<br>
+<a href="https://www.instagram.com/reel/C6_QvyfSfRO/?igsh=MWl3cmY4eTJoNnZhcw==" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C6_QvyfSfRO/?igsh=MWl3cmY4eTJoNnZhcw==</a>
 <a href="https://www.instagram.com/reel/C8b9wEjSMkz/?igsh=bzJrc2o5a2I5ZmJ6" target="_blank" rel="noopener noreferrer" class="">https://www.instagram.com/reel/C8b9wEjSMkz/?igsh=bzJrc2o5a2I5ZmJ6</a></p>]]></content>
     </entry>
 </feed>
