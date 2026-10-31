@@ -1,0 +1,252 @@
+{
+  "brand": {
+    "name": "好室設計",
+    "en": "GOOD INTERIOR",
+    "logo": "",
+    "fullName": "好室設計 Good Interior Design",
+    "footer": "示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash"
+  },
+  "contact": {
+    "phone": "02-0000-0000",
+    "email": "hello@example.com",
+    "address": "台北市○○區○○路 00 號（範例地址）",
+    "hours": "週一至週五 10:00 – 19:00（採預約制）",
+    "intro": "留下您的需求，設計顧問將於兩個工作天內與您聯繫，安排免費初步諮詢。"
+  },
+  "home": {
+    "slides": [
+      {
+        "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=80"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=80"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=80"
+      }
+    ],
+    "tagline": "Live well, live simply",
+    "title": "以光為筆\n為生活留白",
+    "subtitle": "從生活習慣出發，打造安靜、耐看、能陪你走很久的家。",
+    "welcomeTitle": "好的空間，讓日子更好過",
+    "welcomeText": "好室設計專注住宅與商業空間，從丈量、規劃、3D 模擬到施工監造一站完成。我們以自然材質與充足採光為核心，並全程掌握預算與工期。"
+  },
+  "pages": {
+    "product": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=80",
+    "about": "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80",
+    "news": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=2000&q=80",
+    "blog": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=2000&q=80",
+    "contact": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80"
+  },
+  "works": [
+    {
+      "title": "暖木之境",
+      "category": "新成屋",
+      "info": "台北大安｜42 坪",
+      "image": "https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "title": "光的回聲",
+      "category": "老屋翻新",
+      "info": "新北永和｜30 坪",
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "title": "靜謐日常",
+      "category": "新成屋",
+      "info": "桃園青埔｜35 坪",
+      "image": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "title": "白日工作室",
+      "category": "商業空間",
+      "info": "台北信義｜60 坪",
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "title": "餐桌上的家",
+      "category": "老屋翻新",
+      "info": "台中西區｜28 坪",
+      "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=80"
+    },
+    {
+      "title": "午後咖啡",
+      "category": "商業空間",
+      "info": "台南中西區｜25 坪",
+      "image": "https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80"
+    }
+  ],
+  "services": [
+    {
+      "title": "住宅空間設計",
+      "desc": "新成屋、預售屋客變，依家庭成員與生活動線量身規劃。"
+    },
+    {
+      "title": "老屋翻新",
+      "desc": "水電管線更新、結構補強、防水處理，讓老房子重新呼吸。"
+    },
+    {
+      "title": "商業空間規劃",
+      "desc": "辦公室、餐飲、零售店面，兼顧品牌調性與營運效率。"
+    },
+    {
+      "title": "系統櫃與訂製家具",
+      "desc": "依空間尺寸訂製收納與家具，每一公分都用得剛好。"
+    },
+    {
+      "title": "軟裝陳設",
+      "desc": "燈具、窗簾、家飾與植栽搭配，完成空間最後一哩路。"
+    },
+    {
+      "title": "工程監造",
+      "desc": "專人駐點管理，每週回報進度，確保品質與工期。"
+    }
+  ],
+  "about": {
+    "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80",
+    "quote": "「好的空間不需要喧嘩，\n它只是讓日子變得更好過。」",
+    "text": "好室設計由一群建築與室內背景的設計師組成。我們相信設計的起點是「人」——你怎麼起床、在哪裡看書、孩子在哪裡寫功課、家人如何相聚。\n\n我們以自然材質、溫潤色調與充足的採光為核心，並全程掌握預算與工期，讓裝修不再是一場冒險。",
+    "stats": [
+      {
+        "value": "12",
+        "label": "年設計經驗"
+      },
+      {
+        "value": "380+",
+        "label": "完成案件"
+      },
+      {
+        "value": "98%",
+        "label": "屋主推薦率"
+      }
+    ],
+    "team": [
+      {
+        "image": "https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80",
+        "name": "林以安",
+        "role": "創辦人／設計總監",
+        "bio": "建築系畢業，十二年住宅設計經驗，擅長採光與動線規劃。"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80",
+        "name": "陳思妤",
+        "role": "資深設計師",
+        "bio": "專注老屋翻新，熟悉結構補強與防水工法。"
+      },
+      {
+        "image": "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80",
+        "name": "黃柏宇",
+        "role": "工程主任",
+        "bio": "負責現場監造與工班協調，確保每個細節如圖施作。"
+      }
+    ]
+  },
+  "process": [
+    {
+      "title": "初步諮詢",
+      "desc": "了解需求、預算與期待"
+    },
+    {
+      "title": "現場丈量",
+      "desc": "實地勘查與屋況評估"
+    },
+    {
+      "title": "平面規劃",
+      "desc": "提出配置與動線方案"
+    },
+    {
+      "title": "3D 模擬",
+      "desc": "材質、色彩與立面確認"
+    },
+    {
+      "title": "施工監造",
+      "desc": "工程管理與進度回報"
+    },
+    {
+      "title": "完工交屋",
+      "desc": "驗收、清潔與保固服務"
+    }
+  ],
+  "news": [
+    {
+      "date": "2026.10.20",
+      "tag": "公告",
+      "title": "年末檔期諮詢開放預約",
+      "text": "2026 年底前完成丈量的案件，可優先排入明年第一季施工。"
+    },
+    {
+      "date": "2026.09.05",
+      "tag": "得獎",
+      "title": "「暖木之境」入圍年度住宅設計獎",
+      "text": "感謝屋主信任，讓這個以木質與自然光為主角的家被更多人看見。"
+    },
+    {
+      "date": "2026.08.12",
+      "tag": "活動",
+      "title": "老屋翻新講座：從管線到防水",
+      "text": "工程主任分享老屋常見問題與預算配置，現場名額 40 位。"
+    },
+    {
+      "date": "2026.06.30",
+      "tag": "公告",
+      "title": "工作室搬遷至新址",
+      "text": "新工作室設有材質展示區，歡迎預約參觀。"
+    },
+    {
+      "date": "2026.05.18",
+      "tag": "媒體",
+      "title": "居家雜誌專訪：小坪數也能有餘裕",
+      "text": "談收納整合與多功能空間的設計思考。"
+    }
+  ],
+  "blog": [
+    {
+      "image": "https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=900&q=80",
+      "category": "裝修知識",
+      "date": "2026.10.08",
+      "title": "裝修前一定要問設計師的 7 個問題",
+      "excerpt": "從報價方式、追加費用到保固內容，簽約前先問清楚，能省下許多後續爭議。",
+      "body": "1. 報價包含哪些項目？\n2. 追加費用怎麼計算？\n3. 工期多久、如何延誤處理？\n4. 由誰監工？\n5. 付款分幾期？\n6. 保固範圍與年限？\n7. 能否參觀過去完工案例？"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80",
+      "category": "空間規劃",
+      "date": "2026.09.21",
+      "title": "廚房動線：黃金三角怎麼配置",
+      "excerpt": "冰箱、水槽、爐台三點之間的距離，決定了做菜時順不順手。",
+      "body": "三邊總長建議在 4～7 公尺之間，任一邊不宜超過 2.7 公尺；一字型廚房可沿檯面依「拿取→清洗→烹調」順序排列。"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=900&q=80",
+      "category": "老屋翻新",
+      "date": "2026.08.30",
+      "title": "30 年老屋翻新，預算該怎麼抓",
+      "excerpt": "老屋看不見的地方最花錢：管線、防水與結構，建議先保留足夠預算。",
+      "body": "建議將約 30～40% 預算放在基礎工程（水電管線、防水、結構），其餘再分配給木作、系統櫃與軟裝。"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=900&q=80",
+      "category": "材質選擇",
+      "date": "2026.07.15",
+      "title": "木地板、磁磚、超耐磨，哪個適合你",
+      "excerpt": "依預算、清潔習慣與是否有寵物，選擇最合適的地坪材質。",
+      "body": "實木地板質感最好但怕潮；超耐磨地板耐刮好清潔、CP 值高；磁磚最耐用，適合潮濕或有寵物的家庭。"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=900&q=80",
+      "category": "採光設計",
+      "date": "2026.06.02",
+      "title": "讓暗房變亮的 5 個方法",
+      "excerpt": "不打牆也能讓光線走進來：玻璃隔間、淺色材質與鏡面運用。",
+      "body": "玻璃或格柵隔間引光、牆面與天花採淺色、善用鏡面反射、降低高櫃比例、以多層次間接照明補足。"
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80",
+      "category": "軟裝陳設",
+      "date": "2026.05.10",
+      "title": "用軟裝為家換季，不必大動工程",
+      "excerpt": "窗簾、抱枕、地毯與燈具，是最快改變空間氛圍的方式。",
+      "body": "春夏選亞麻、棉等輕盈材質與淺色調；秋冬換上絨布、羊毛與暖色燈光，花小錢就有新感覺。"
+    }
+  ]
+}

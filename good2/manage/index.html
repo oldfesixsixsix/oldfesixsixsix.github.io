@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>後台管理｜好室設計</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#f4f2ee;--panel:#fff;--ink:#2b2824;--muted:#7a7268;--line:#e2dcd2;--accent:#9a7b5b;--danger:#b4483c;--ok:#4f7a4f}
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{background:var(--bg);color:var(--ink);font:14px/1.6 "Noto Sans TC",sans-serif}
+  button,input,textarea,select{font:inherit;color:inherit}
+  a{color:var(--accent)}
+  .top{position:sticky;top:0;z-index:20;background:var(--ink);color:#fff;display:flex;align-items:center;gap:12px;padding:10px 20px;flex-wrap:wrap}
+  .top h1{font-size:16px;font-weight:500;letter-spacing:.1em;margin-right:auto}
+  .top h1 small{opacity:.6;font-weight:400;margin-left:8px}
+  .status{font-size:12px;opacity:.8}
+  .btn{border:1px solid var(--line);background:var(--panel);padding:7px 16px;border-radius:6px;cursor:pointer;white-space:nowrap}
+  .btn:hover{border-color:var(--ink)}
+  .btn.primary{background:var(--accent);border-color:var(--accent);color:#fff}
+  .btn.primary:hover{filter:brightness(1.08)}
+  .btn.ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,.3)}
+  .btn.ghost:hover{border-color:#fff}
+  .btn.small{padding:3px 10px;font-size:12px}
+  .btn.danger{color:var(--danger)}
+  .btn:disabled{opacity:.5;cursor:default}
+  .layout{display:grid;grid-template-columns:200px 1fr;max-width:1200px;margin:0 auto;gap:24px;padding:24px 20px 80px}
+  nav.tabs{display:flex;flex-direction:column;gap:2px;position:sticky;top:76px;align-self:start}
+  nav.tabs button{text-align:left;background:none;border:0;padding:10px 14px;border-radius:6px;cursor:pointer;color:var(--muted)}
+  nav.tabs button:hover{background:rgba(0,0,0,.04)}
+  nav.tabs button.on{background:var(--panel);color:var(--ink);font-weight:500;box-shadow:0 1px 2px rgba(0,0,0,.06)}
+  main{min-width:0}
+  .card{background:var(--panel);border-radius:10px;padding:22px 24px;margin-bottom:18px;box-shadow:0 1px 2px rgba(0,0,0,.05)}
+  .card>h2{font-size:15px;font-weight:500;margin-bottom:16px;display:flex;align-items:center;gap:10px}
+  .card>h2 .count{font-size:12px;color:var(--muted);font-weight:400}
+  .hint{font-size:12px;color:var(--muted);margin:-10px 0 14px}
+  .field{display:grid;grid-template-columns:140px 1fr;gap:12px;align-items:start;margin-bottom:12px}
+  .field>label{padding-top:7px;color:var(--muted);font-size:13px}
+  input[type=text],input[type=password],textarea{width:100%;border:1px solid var(--line);border-radius:6px;padding:7px 10px;background:#fff;outline:0}
+  input:focus,textarea:focus{border-color:var(--accent)}
+  textarea{min-height:80px;resize:vertical}
+  .imgf{display:flex;gap:12px;align-items:flex-start}
+  .imgf .thumb{width:96px;height:64px;border-radius:6px;background:#eee center/cover no-repeat;flex:none;border:1px solid var(--line)}
+  .imgf .col{flex:1;display:flex;flex-direction:column;gap:6px;min-width:0}
+  .imgf .row{display:flex;gap:6px;align-items:center;flex-wrap:wrap}
+  .item{border:1px solid var(--line);border-radius:8px;margin-bottom:10px;background:#fcfbf9}
+  .item>.ih{display:flex;align-items:center;gap:8px;padding:8px 12px;cursor:pointer}
+  .item>.ih .t{flex:1;font-weight:500;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+  .item>.ih .n{color:var(--muted);font-size:12px;width:22px}
+  .item>.ib{padding:14px 14px 4px;border-top:1px solid var(--line);display:none}
+  .item.open>.ib{display:block}
+  .item>.ih .caret{transition:transform .2s;color:var(--muted)}
+  .item.open>.ih .caret{transform:rotate(90deg)}
+  .banner{background:#fff6e5;border:1px solid #ecd9b0;padding:10px 14px;border-radius:8px;margin-bottom:18px;display:flex;gap:12px;align-items:center;flex-wrap:wrap}
+  .banner.warn{background:#fdeeee;border-color:#efc9c4}
+  .banner span{flex:1}
+  .steps-help ol{padding-left:20px}
+  .steps-help li{margin-bottom:6px}
+  code{background:#f0ece6;padding:1px 6px;border-radius:4px;font-size:12px}
+  .toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 20px;border-radius:8px;z-index:50;opacity:0;transition:opacity .3s;pointer-events:none;max-width:90vw}
+  .toast.on{opacity:1}
+  .toast.err{background:var(--danger)}
+  @media (max-width:800px){
+    .layout{grid-template-columns:1fr;padding:12px 12px 80px}
+    nav.tabs{flex-direction:row;overflow-x:auto;position:static;gap:4px}
+    nav.tabs button{white-space:nowrap}
+    .field{grid-template-columns:1fr;gap:4px}
+    .field>label{padding-top:0}
+    .card{padding:18px 16px}
+  }
+</style>
+</head>
+<body>
+
+<div class="top">
+  <h1>好室設計 後台<small>/good2/manage</small></h1>
+  <span class="status" id="status"></span>
+  <button class="btn ghost" id="previewBtn">預覽網站</button>
+  <button class="btn primary" id="publishBtn">發佈</button>
+</div>
+
+<div class="layout">
+  <nav class="tabs" id="tabs"></nav>
+  <main id="main"></main>
+</div>
+<div class="toast" id="toast"></div>
+<input type="file" id="importFile" accept="application/json,.json" hidden>
+
+<script>
+const DRAFT_KEY='good2-draft', CFG_KEY='good2-manage-config';
+const CONTENT_PATH='good2/data/content.json', UPLOAD_DIR='good2/uploads/';
+const SITE_BASE=new URL('../',location.href);   // /good2/
+
+// ---------- storage (localStorage can be unavailable) ----------
+const store={
+  get(k){try{return localStorage.getItem(k)}catch(e){return null}},
+  set(k,v){try{localStorage.setItem(k,v);return true}catch(e){return false}},
+  del(k){try{localStorage.removeItem(k)}catch(e){}}
+};
+let cfg=Object.assign({owner:'oldfesixsixsix',repo:'oldfesixsixsix.github.io',branch:'main',token:''},JSON.parse(store.get(CFG_KEY)||'{}'));
+const saveCfg=()=>store.set(CFG_KEY,JSON.stringify(cfg));
+
+// ---------- schema: what the admin can edit ----------
+const F=(key,label,type='text',hint)=>({key,label,type,hint});
+const TABS=[
+  {id:'brand',label:'品牌與聯絡',sections:[
+    {title:'品牌',path:'brand',fields:[F('name','品牌名稱'),F('en','英文副標'),F('logo','Logo 圖片','image','選填。留空會顯示上面的文字 Logo；建議用去背 PNG，高度約 88px'),F('fullName','完整名稱（頁尾）'),F('footer','頁尾備註')]},
+    {title:'聯絡資訊',path:'contact',fields:[F('phone','電話'),F('email','信箱'),F('address','地址'),F('hours','營業時間'),F('intro','聯絡頁說明','textarea')]},
+  ]},
+  {id:'home',label:'首頁',sections:[
+    {title:'主視覺文字',path:'home',fields:[F('tagline','英文標語'),F('title','主標題','textarea','按 Enter 換行'),F('subtitle','副標題'),F('welcomeTitle','歡迎區標題'),F('welcomeText','歡迎區內文','textarea')]},
+    {title:'輪播圖片',path:'home.slides',list:true,blank:{image:''},itemTitle:(it,i)=>`第 ${i+1} 張`,fields:[F('image','圖片','image')]},
+  ]},
+  {id:'works',label:'作品',sections:[
+    {title:'作品集',path:'works',list:true,hint:'分類相同的作品會自動歸成同一個篩選按鈕',blank:{title:'新作品',category:'新成屋',info:'',image:''},itemTitle:it=>it.title,fields:[F('title','作品名稱'),F('category','分類','text','例：新成屋、老屋翻新、商業空間'),F('info','資訊','text','例：台北大安｜42 坪'),F('image','圖片','image')]},
+  ]},
+  {id:'services',label:'服務項目',sections:[
+    {title:'服務項目',path:'services',list:true,blank:{title:'新服務',desc:''},itemTitle:it=>it.title,fields:[F('title','名稱'),F('desc','說明','textarea')]},
+  ]},
+  {id:'about',label:'關於我們',sections:[
+    {title:'介紹',path:'about',fields:[F('image','主圖','image'),F('quote','引言','textarea'),F('text','介紹內文','textarea','空一行代表分段')]},
+    {title:'數字統計',path:'about.stats',list:true,blank:{value:'',label:''},itemTitle:it=>`${it.value} ${it.label}`,fields:[F('value','數字'),F('label','說明')]},
+    {title:'設計流程',path:'process',list:true,blank:{title:'新步驟',desc:''},itemTitle:it=>it.title,fields:[F('title','步驟名稱'),F('desc','說明')]},
+    {title:'設計團隊',path:'about.team',list:true,blank:{image:'',name:'新成員',role:'',bio:''},itemTitle:it=>`${it.name}　${it.role}`,fields:[F('image','照片','image'),F('name','姓名'),F('role','職稱'),F('bio','介紹','textarea')]},
+  ]},
+  {id:'news',label:'最新消息',sections:[
+    {title:'最新消息',path:'news',list:true,addTop:true,hint:'新增的消息會放在最上面',blank:()=>({date:today(),tag:'公告',title:'新消息',text:''}),itemTitle:it=>`${it.date}　${it.title}`,fields:[F('date','日期','text','例：2026.10.31'),F('tag','標籤'),F('title','標題'),F('text','內容','textarea')]},
+  ]},
+  {id:'blog',label:'設計專欄',sections:[
+    {title:'文章',path:'blog',list:true,addTop:true,hint:'新增的文章會放在最上面',blank:()=>({image:'',category:'',date:today(),title:'新文章',excerpt:'',body:''}),itemTitle:it=>it.title,fields:[F('title','標題'),F('category','分類'),F('date','日期'),F('image','封面圖','image'),F('excerpt','摘要','textarea'),F('body','內文（閱讀更多）','textarea')]},
+  ]},
+  {id:'pages',label:'頁面橫幅',sections:[
+    {title:'各頁上方橫幅圖片',path:'pages',hint:'首頁的四個入口卡片也會使用這些圖片',fields:[F('product','作品與服務','image'),F('about','關於我們','image'),F('news','最新消息','image'),F('blog','設計專欄','image'),F('contact','聯絡我們','image')]},
+  ]},
+  {id:'settings',label:'發佈設定',custom:renderSettings},
+];
+
+// ---------- state ----------
+let data=null, dirty=false, published=null, curTab='brand';
+const localImgs=new Map(); // repo path -> object URL, so fresh uploads show before Pages redeploys
+const get=(o,p)=>p.split('.').reduce((a,k)=>a[k],o);
+const today=()=>{const d=new Date();return `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`};
+const imgURL=p=>!p?'':localImgs.get(p)||(/^(https?:|data:|blob:|\/)/.test(p)?p:new URL(p,SITE_BASE).href);
+
+function h(tag,props={},...kids){
+  const el=document.createElement(tag);
+  for(const[k,v]of Object.entries(props)){
+    if(k==='class')el.className=v;else if(k==='text')el.textContent=v;
+    else if(k.startsWith('on'))el[k]=v;else if(v!==false&&v!=null)el.setAttribute(k,v===true?'':v);
+  }
+  kids.flat().forEach(c=>c!=null&&c!==false&&el.append(c));return el;
+}
+let toastT;
+function toast(msg,err){const t=document.getElementById('toast');t.textContent=msg;t.className='toast on'+(err?' err':'');clearTimeout(toastT);toastT=setTimeout(()=>t.className='toast',err?6000:2800)}
+
+function setStatus(){
+  const s=document.getElementById('status');
+  s.textContent=dirty?'● 有未發佈的修改（已自動存成草稿）':'已是最新發佈內容';
+}
+function markDirty(){dirty=true;store.set(DRAFT_KEY,JSON.stringify(data));setStatus()}
+
+// ---------- GitHub API ----------
+const api=(path,opt={})=>fetch(`https://api.github.com/repos/${cfg.owner}/${cfg.repo}/contents/${path}`,{
+  ...opt,headers:{Accept:'application/vnd.github+json',Authorization:`Bearer ${cfg.token}`,...(opt.headers||{})}});
+const b64=str=>{const bytes=new TextEncoder().encode(str);let s='';bytes.forEach(b=>s+=String.fromCharCode(b));return btoa(s)};
+const unb64=s=>new TextDecoder().decode(Uint8Array.from(atob(s.replace(/\n/g,'')),c=>c.charCodeAt(0)));
+async function getSha(path){
+  const r=await api(`${path}?ref=${encodeURIComponent(cfg.branch)}`);
+  if(r.status===404)return null;
+  if(!r.ok)throw new Error(await errText(r));
+  return (await r.json()).sha;
+}
+async function errText(r){
+  if(r.status===401)return 'Token 無效或已過期（401）';
+  if(r.status===403||r.status===404)return `沒有權限寫入 ${cfg.owner}/${cfg.repo}（${r.status}）。請確認 token 有這個 repo 的 Contents 讀寫權限`;
+  try{return (await r.json()).message}catch(e){return 'HTTP '+r.status}
+}
+async function putFile(path,base64,message){
+  const sha=await getSha(path);
+  const r=await api(path,{method:'PUT',body:JSON.stringify({message,content:base64,branch:cfg.branch,...(sha?{sha}:{})})});
+  if(!r.ok)throw new Error(await errText(r));
+}
+
+// ---------- load ----------
+async function load(){
+  const draft=store.get(DRAFT_KEY);
+  try{
+    if(cfg.token){
+      const r=await api(`${CONTENT_PATH}?ref=${encodeURIComponent(cfg.branch)}`);
+      if(!r.ok)throw new Error(await errText(r));
+      published=JSON.parse(unb64((await r.json()).content));
+    }else{
+      const r=await fetch(new URL('data/content.json',SITE_BASE),{cache:'no-store'});
+      if(!r.ok)throw new Error('content.json '+r.status);
+      published=await r.json();
+    }
+  }catch(e){toast('讀取網站內容失敗：'+e.message,true)}
+  if(draft){data=JSON.parse(draft);dirty=JSON.stringify(data)!==JSON.stringify(published)}
+  else data=structuredClone(published);
+  if(!data){document.getElementById('main').append(h('div',{class:'banner warn'},h('span',{text:'無法載入內容，請重新整理頁面。'})));return}
+  if(!dirty)store.del(DRAFT_KEY);
+  setStatus();renderTabs();render();
+}
+
+// ---------- render ----------
+function renderTabs(){
+  const nav=document.getElementById('tabs');
+  nav.replaceChildren(...TABS.map(t=>h('button',{class:t.id===curTab?'on':'',text:t.label,onclick:()=>{curTab=t.id;renderTabs();render();scrollTo(0,0)}})));
+}
+function render(){
+  const main=document.getElementById('main');main.replaceChildren();
+  if(dirty&&published)main.append(h('div',{class:'banner'},h('span',{text:'你有尚未發佈的修改。按右上角「發佈」才會更新網站，或「預覽網站」先看效果。'}),h('button',{class:'btn small danger',text:'捨棄修改',onclick:discard})));
+  if(!cfg.token&&curTab!=='settings')main.append(h('div',{class:'banner warn'},h('span',{text:'尚未設定 GitHub Token，可以編輯和預覽，但無法發佈或上傳圖片。'}),h('button',{class:'btn small',text:'前往設定',onclick:()=>{curTab='settings';renderTabs();render()}})));
+  const tab=TABS.find(t=>t.id===curTab);
+  if(tab.custom)return tab.custom(main);
+  tab.sections.forEach(sec=>main.append(sec.list?renderList(sec):renderGroup(sec)));
+}
+function renderGroup(sec){
+  const obj=get(data,sec.path);
+  return h('div',{class:'card'},h('h2',{text:sec.title}),sec.hint&&h('p',{class:'hint',text:sec.hint}),sec.fields.map(f=>renderField(obj,f)));
+}
+function renderField(obj,f,onChange){
+  const id='f'+Math.random().toString(36).slice(2);
+  const upd=v=>{obj[f.key]=v;markDirty();onChange&&onChange()};
+  let input;
+  if(f.type==='textarea')input=h('textarea',{id,oninput:e=>upd(e.target.value)},obj[f.key]??'');
+  else if(f.type==='image')input=imageInput(obj,f,upd,id);
+  else input=h('input',{type:'text',id,value:obj[f.key]??'',oninput:e=>upd(e.target.value)});
+  return h('div',{class:'field'},h('label',{for:id,text:f.label}),h('div',{},input,f.hint&&f.type!=='image'&&h('div',{class:'hint',style:'margin:4px 0 0',text:f.hint})));
+}
+function imageInput(obj,f,upd,id){
+  const thumb=h('div',{class:'thumb'});
+  const show=()=>thumb.style.backgroundImage=obj[f.key]?`url("${imgURL(obj[f.key])}")`:'none';
+  const url=h('input',{type:'text',id,value:obj[f.key]??'',placeholder:'貼上圖片網址，或按「上傳」',oninput:e=>{upd(e.target.value);show()}});
+  const file=h('input',{type:'file',accept:'image/*',hidden:true});
+  const upBtn=h('button',{class:'btn small',text:'上傳圖片',type:'button',onclick:()=>{
+    if(!cfg.token)return toast('請先到「發佈設定」填入 GitHub Token 才能上傳',true);
+    file.click();
+  }});
+  file.onchange=async()=>{
+    const f0=file.files[0];if(!f0)return;
+    upBtn.disabled=true;upBtn.textContent='上傳中…';
+    try{
+      const {blob,ext}=await shrink(f0);
+      const name=`${Date.now()}-${f0.name.replace(/\.[^.]+$/,'').replace(/[^\w-]+/g,'').slice(0,30)||'img'}.${ext}`;
+      const b64data=await new Promise(r=>{const fr=new FileReader();fr.onload=()=>r(fr.result.split(',')[1]);fr.readAsDataURL(blob)});
+      await putFile(UPLOAD_DIR+name,b64data,`Upload image ${name} via /good2/manage`);
+      const rel='uploads/'+name;
+      localImgs.set(rel,URL.createObjectURL(blob));
+      url.value=rel;upd(rel);show();
+      toast('圖片已上傳，記得按「發佈」讓網站使用新圖片');
+    }catch(e){toast('上傳失敗：'+e.message,true)}
+    upBtn.disabled=false;upBtn.textContent='上傳圖片';file.value='';
+  };
+  const clear=h('button',{class:'btn small',text:'清除',type:'button',onclick:()=>{url.value='';upd('');show()}});
+  show();
+  return h('div',{class:'imgf'},thumb,h('div',{class:'col'},url,h('div',{class:'row'},upBtn,clear,f.hint&&h('span',{class:'hint',style:'margin:0',text:f.hint}))),file);
+}
+// downscale large photos before upload (max 1920px, JPEG); keep PNG/SVG/GIF as-is for logos
+async function shrink(file){
+  if(!/^image\/(jpeg|webp)$/.test(file.type)||file.size<400*1024)
+    return {blob:file,ext:(file.name.split('.').pop()||'png').toLowerCase()};
+  const bmp=await createImageBitmap(file);
+  const k=Math.min(1,1920/Math.max(bmp.width,bmp.height));
+  const c=document.createElement('canvas');c.width=Math.round(bmp.width*k);c.height=Math.round(bmp.height*k);
+  c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);
+  const blob=await new Promise(r=>c.toBlob(r,'image/jpeg',.85));
+  return {blob,ext:'jpg'};
+}
+function renderList(sec){
+  const arr=get(data,sec.path);
+  const card=h('div',{class:'card'});
+  const redraw=()=>card.replaceWith(renderList(sec));
+  const blank=()=>structuredClone(typeof sec.blank==='function'?sec.blank():sec.blank);
+  card.append(h('h2',{},sec.title,h('span',{class:'count',text:`共 ${arr.length} 項`})));
+  if(sec.hint)card.append(h('p',{class:'hint',text:sec.hint}));
+  arr.forEach((it,i)=>{
+    const title=h('span',{class:'t',text:sec.itemTitle(it,i)||'（未命名）'});
+    const item=h('div',{class:'item'+(sec._open===it?' open':'')});
+    const stop=fn=>e=>{e.stopPropagation();fn()};
+    const move=d=>{const j=i+d;if(j<0||j>=arr.length)return;[arr[i],arr[j]]=[arr[j],arr[i]];markDirty();redraw()};
+    item.append(
+      h('div',{class:'ih',onclick:()=>{item.classList.toggle('open');sec._open=item.classList.contains('open')?it:null}},
+        h('span',{class:'caret',text:'▸'}),h('span',{class:'n',text:i+1}),title,
+        h('button',{class:'btn small',text:'↑',title:'上移',disabled:i===0,onclick:stop(()=>move(-1))}),
+        h('button',{class:'btn small',text:'↓',title:'下移',disabled:i===arr.length-1,onclick:stop(()=>move(1))}),
+        h('button',{class:'btn small danger',text:'刪除',onclick:stop(()=>{if(confirm(`確定刪除「${sec.itemTitle(it,i)}」？`)){arr.splice(i,1);markDirty();redraw()}})})),
+      h('div',{class:'ib'},sec.fields.map(f=>renderField(it,f,()=>title.textContent=sec.itemTitle(it,i)||'（未命名）'))));
+    card.append(item);
+  });
+  card.append(h('button',{class:'btn',text:'＋ 新增',onclick:()=>{const n=blank();sec.addTop?arr.unshift(n):arr.push(n);sec._open=n;markDirty();redraw()}}));
+  return card;
+}
+
+function renderSettings(main){
+  const inp=(k,label,type='text',ph='')=>{
+    const id='s-'+k;
+    return h('div',{class:'field'},h('label',{for:id,text:label}),h('input',{id,type,value:cfg[k],placeholder:ph,autocomplete:'off',oninput:e=>{cfg[k]=e.target.value.trim();saveCfg()}}));
+  };
+  main.append(
+    h('div',{class:'card'},h('h2',{text:'GitHub 發佈設定'}),
+      h('p',{class:'hint',text:'發佈時會把內容存到這個 repo 的 good2/data/content.json，GitHub Pages 約 1–2 分鐘後更新網站。設定只存在這台電腦的瀏覽器裡。'}),
+      inp('owner','帳號 (owner)'),inp('repo','Repo 名稱'),inp('branch','分支'),inp('token','存取權杖 (Token)','password','github_pat_…'),
+      h('div',{class:'field'},h('span'),h('div',{},
+        h('button',{class:'btn primary',text:'測試連線並重新載入',onclick:async()=>{await load();if(cfg.token)toast('連線成功')}}),' ',
+        h('button',{class:'btn danger',text:'登出（清除 Token）',onclick:()=>{cfg.token='';saveCfg();render();toast('已清除 Token')}})))),
+    h('div',{class:'card steps-help'},h('h2',{text:'如何取得 Token'}),
+      h('ol',{},
+        h('li',{},'到 GitHub → Settings → Developer settings → Personal access tokens → ',h('a',{href:'https://github.com/settings/personal-access-tokens/new',target:'_blank',rel:'noopener',text:'Fine-grained tokens'})),
+        h('li',{},'Repository access 選「Only select repositories」，只勾 ',h('code',{text:`${cfg.owner}/${cfg.repo}`})),
+        h('li',{},'Permissions → Repository permissions → ',h('b',{text:'Contents'}),' 設為 ',h('b',{text:'Read and write'})),
+        h('li',{},'產生後複製 token，貼到上面的欄位')),
+      h('p',{class:'hint',style:'margin:12px 0 0',text:'注意：Token 等同你的帳號密碼，只在自己的電腦上輸入；公用電腦用完請按「登出」。後台頁面雖然任何人都打得開，但沒有 token 就無法修改網站。'})),
+    h('div',{class:'card'},h('h2',{text:'備份與還原'}),
+      h('p',{class:'hint',text:'可以把目前內容匯出成 JSON 檔備份，或匯入之前的備份（匯入後需按「發佈」）。'}),
+      h('button',{class:'btn',text:'匯出 JSON',onclick:exportJSON}),' ',
+      h('button',{class:'btn',text:'匯入 JSON',onclick:()=>document.getElementById('importFile').click()}),' ',
+      dirty&&h('button',{class:'btn danger',text:'捨棄所有未發佈修改',onclick:discard})),
+  );
+}
+
+// ---------- actions ----------
+function discard(){
+  if(!confirm('確定捨棄所有未發佈的修改？'))return;
+  store.del(DRAFT_KEY);data=structuredClone(published);dirty=false;setStatus();render();toast('已捨棄修改');
+}
+function exportJSON(){
+  const a=h('a',{href:URL.createObjectURL(new Blob([JSON.stringify(data,null,2)],{type:'application/json'})),download:`good2-content-${today()}.json`});
+  document.body.append(a);a.click();a.remove();
+}
+document.getElementById('importFile').onchange=async e=>{
+  const f=e.target.files[0];if(!f)return;
+  try{const d=JSON.parse(await f.text());if(!d.brand||!d.works)throw new Error('格式不符');data=d;markDirty();render();toast('已匯入，確認無誤後請按「發佈」')}
+  catch(err){toast('匯入失敗：'+err.message,true)}
+  e.target.value='';
+};
+document.getElementById('previewBtn').onclick=()=>{
+  if(!store.set(DRAFT_KEY,JSON.stringify(data)))return toast('瀏覽器無法儲存草稿，無法預覽',true);
+  window.open(new URL('?preview=1',SITE_BASE).href,'_blank');
+};
+document.getElementById('publishBtn').onclick=async()=>{
+  if(!cfg.token){curTab='settings';renderTabs();render();return toast('請先設定 GitHub Token',true)}
+  if(!dirty&&!confirm('目前沒有修改，仍要重新發佈嗎？'))return;
+  const btn=document.getElementById('publishBtn');btn.disabled=true;btn.textContent='發佈中…';
+  try{
+    await putFile(CONTENT_PATH,b64(JSON.stringify(data,null,2)+'\n'),'Update site content via /good2/manage');
+    published=structuredClone(data);dirty=false;store.del(DRAFT_KEY);setStatus();render();
+    toast('已發佈！網站約 1–2 分鐘後更新');
+  }catch(e){toast('發佈失敗：'+e.message,true)}
+  btn.disabled=false;btn.textContent='發佈';
+};
+load();
+</script>
+</body>
+</html>

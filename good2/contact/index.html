@@ -4,17 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>聯絡我們｜好室設計</title>
-<meta name="description" content="預約好室設計免費初步諮詢。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body data-page-title="聯絡我們">
 
 <header id="top">
   <div class="wrap nav">
-    <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+    <a href="../" class="logo" data-logo></a>
     <nav class="menu" id="menu">
       <a href="../product/">作品與服務</a>
       <a href="../about/">關於我們</a>
@@ -27,7 +26,7 @@
 </header>
 
 <div class="banner">
-  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80" alt="">
+  <img data-banner="contact" alt="">
   <div class="wrap">
     <span class="en">Contact</span>
     <h1>聯絡我們</h1>
@@ -39,12 +38,12 @@
   <div class="wrap contact">
     <div class="info reveal">
       <div class="head"><span class="en">Get in touch</span><h2>預約諮詢</h2></div>
-      <p style="color:var(--muted)">留下您的需求，設計顧問將於兩個工作天內與您聯繫，安排免費初步諮詢。</p>
+      <p style="color:var(--muted)" data-bind="contact.intro"></p>
       <dl>
-        <dt>電話</dt><dd>02-0000-0000</dd>
-        <dt>信箱</dt><dd>hello@example.com</dd>
-        <dt>地址</dt><dd>台北市○○區○○路 00 號（範例地址）</dd>
-        <dt>營業時間</dt><dd>週一至週五 10:00 – 19:00（採預約制）</dd>
+        <dt>電話</dt><dd data-bind="contact.phone"></dd>
+        <dt>信箱</dt><dd data-bind="contact.email"></dd>
+        <dt>地址</dt><dd data-bind="contact.address"></dd>
+        <dt>營業時間</dt><dd data-bind="contact.hours"></dd>
       </dl>
     </div>
     <form id="form" class="reveal" novalidate>
@@ -74,10 +73,10 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
-      <div>02-0000-0000　｜　hello@example.com</div>
+      <a href="../" class="logo" data-logo></a>
+      <div><span data-bind="contact.phone"></span>　｜　<span data-bind="contact.email"></span></div>
     </div>
-    <div class="copy">© 2026 好室設計 Good Interior Design · 示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash</div>
+    <div class="copy">© <span data-year></span> <span data-bind="brand.fullName"></span> · <span data-bind="brand.footer"></span></div>
   </div>
 </footer>
 
