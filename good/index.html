@@ -7,7 +7,7 @@
 <meta name="description" content="好室設計｜住宅與商業空間室內設計，從丈量、規劃到施工監造一站完成。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
   :root{
     --bg:#f6f3ee; --bg-alt:#ece6dd; --ink:#2b2824; --muted:#7a7268;
@@ -19,16 +19,16 @@
   img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
   a{color:inherit;text-decoration:none}
   .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
-  .serif{font-family:"Noto Serif TC",serif}
-  .en{font-family:"Cormorant Garamond",serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--accent)}
+  .serif{font-family:"LXGW WenKai TC",serif}
+  .en{font-family:"Playfair Display",serif;font-style:italic;letter-spacing:.06em;font-size:15px;color:var(--accent)}
 
   /* header */
   header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s}
   header.solid{background:rgba(246,243,238,.95);box-shadow:0 1px 0 var(--line);backdrop-filter:blur(8px)}
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
   .logo{display:flex;flex-direction:column;line-height:1.2}
-  .logo b{font-family:"Noto Serif TC",serif;font-weight:500;font-size:20px;letter-spacing:.3em}
-  .logo span{font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.35em;color:var(--muted)}
+  .logo b{font-family:"LXGW WenKai TC",serif;font-weight:500;font-size:20px;letter-spacing:.3em}
+  .logo span{font-family:"Playfair Display",serif;font-size:11px;letter-spacing:.35em;color:var(--muted)}
   header:not(.solid) .logo, header:not(.solid) .menu a{color:#fff}
   header:not(.solid) .logo span{color:rgba(255,255,255,.75)}
   .menu{display:flex;gap:36px;font-size:14px}
@@ -47,7 +47,7 @@
   @keyframes zoom{to{transform:scale(1)}}
   .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15) 40%,rgba(0,0,0,.45))}
   .hero-text{position:absolute;z-index:2;left:0;right:0;bottom:16vh}
-  .hero h1{font-family:"Noto Serif TC",serif;font-weight:300;font-size:clamp(30px,5vw,56px);letter-spacing:.25em;line-height:1.5}
+  .hero h1{font-family:"LXGW WenKai TC",serif;font-weight:300;font-size:clamp(30px,5vw,56px);letter-spacing:.25em;line-height:1.5}
   .hero p{margin-top:16px;font-size:15px;opacity:.9;max-width:480px}
   .hero .en{color:rgba(255,255,255,.8);display:block;margin-bottom:18px}
   .dots{position:absolute;z-index:2;right:24px;bottom:40px;display:flex;gap:10px}
@@ -57,7 +57,7 @@
   /* sections */
   section{padding:120px 0}
   .head{margin-bottom:56px}
-  .head h2{font-family:"Noto Serif TC",serif;font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:.2em;margin-top:6px}
+  .head h2{font-family:"LXGW WenKai TC",serif;font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:.2em;margin-top:6px}
   .head.center{text-align:center}
   .btn{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--ink);padding:14px 34px;font-size:14px;letter-spacing:.2em;transition:.3s;background:none;color:var(--ink);cursor:pointer;font-family:inherit}
   .btn:hover{background:var(--ink);color:var(--bg)}
@@ -69,9 +69,9 @@
   .about .pic{aspect-ratio:4/5;background:var(--bg-alt);position:relative}
   .about .pic::before{content:"";position:absolute;inset:24px -24px -24px 24px;border:1px solid var(--line);z-index:-1}
   .about p{color:var(--muted);margin-bottom:20px}
-  .about blockquote{font-family:"Noto Serif TC",serif;font-size:22px;line-height:1.8;color:var(--ink);margin-bottom:28px;letter-spacing:.12em}
+  .about blockquote{font-family:"LXGW WenKai TC",serif;font-size:22px;line-height:1.8;color:var(--ink);margin-bottom:28px;letter-spacing:.12em}
   .stats{display:flex;gap:48px;margin:36px 0 40px;padding-top:28px;border-top:1px solid var(--line)}
-  .stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:400;line-height:1;color:var(--ink)}
+  .stats b{display:block;font-family:"Playfair Display",serif;font-size:42px;font-weight:400;line-height:1;color:var(--ink)}
   .stats span{font-size:13px;color:var(--muted)}
 
   /* works */
@@ -84,7 +84,7 @@
   .card .img{aspect-ratio:4/3;overflow:hidden;background:#cfc6b8}
   .card img{transition:transform 1s ease}
   .card:hover img{transform:scale(1.05)}
-  .card h3{font-family:"Noto Serif TC",serif;font-weight:500;font-size:17px;margin-top:18px;letter-spacing:.15em}
+  .card h3{font-family:"LXGW WenKai TC",serif;font-weight:500;font-size:17px;margin-top:18px;letter-spacing:.15em}
   .card small{color:var(--muted);font-size:13px}
   .card.hide{display:none}
 
@@ -92,8 +92,8 @@
   .svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
   .svc div{padding:48px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
   .svc div:nth-child(3n){border-right:0}
-  .svc .num{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--accent);letter-spacing:.2em}
-  .svc h3{font-family:"Noto Serif TC",serif;font-weight:500;font-size:19px;margin:12px 0;letter-spacing:.15em}
+  .svc .num{font-family:"Playfair Display",serif;font-size:15px;color:var(--accent);letter-spacing:.2em}
+  .svc h3{font-family:"LXGW WenKai TC",serif;font-weight:500;font-size:19px;margin:12px 0;letter-spacing:.15em}
   .svc p{font-size:14px;color:var(--muted)}
 
   /* process */
@@ -102,8 +102,8 @@
   .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
   .steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1px;background:rgba(255,255,255,.2)}
   .step{text-align:center;padding:0 10px;position:relative}
-  .step i{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 20px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:var(--dark);font-style:normal;font-family:"Cormorant Garamond",serif;font-size:18px}
-  .step h4{font-family:"Noto Serif TC",serif;font-weight:500;letter-spacing:.15em;margin-bottom:6px}
+  .step i{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 20px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:var(--dark);font-style:normal;font-family:"Playfair Display",serif;font-size:18px}
+  .step h4{font-family:"LXGW WenKai TC",serif;font-weight:500;letter-spacing:.15em;margin-bottom:6px}
   .step p{font-size:13px;color:rgba(233,227,217,.65)}
 
   /* contact */
@@ -142,7 +142,7 @@
   .modal figure{max-width:1000px;width:100%;color:#eee}
   .modal img{max-height:72vh;object-fit:contain;background:#000}
   .modal figcaption{margin-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
-  .modal figcaption b{font-family:"Noto Serif TC",serif;font-weight:500;letter-spacing:.15em}
+  .modal figcaption b{font-family:"LXGW WenKai TC",serif;font-weight:500;letter-spacing:.15em}
   .modal .x{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;font-size:30px;cursor:pointer;font-weight:200}
 
   @media (max-width:900px){
