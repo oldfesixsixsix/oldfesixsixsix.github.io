@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>聯絡我們｜好室設計</title>
+<meta name="description" content="預約好室設計免費初步諮詢。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+    <nav class="menu" id="menu">
+      <a href="../product/">作品與服務</a>
+      <a href="../about/">關於我們</a>
+      <a href="../news/">最新消息</a>
+      <a href="../blog/">設計專欄</a>
+      <a href="../contact/" class="active">聯絡我們</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="選單"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="banner">
+  <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=2000&q=80" alt="">
+  <div class="wrap">
+    <span class="en">Contact</span>
+    <h1>聯絡我們</h1>
+    <div class="crumb"><a href="../">首頁</a>　/　聯絡我們</div>
+  </div>
+</div>
+
+<section>
+  <div class="wrap contact">
+    <div class="info reveal">
+      <div class="head"><span class="en">Get in touch</span><h2>預約諮詢</h2></div>
+      <p style="color:var(--muted)">留下您的需求，設計顧問將於兩個工作天內與您聯繫，安排免費初步諮詢。</p>
+      <dl>
+        <dt>電話</dt><dd>02-0000-0000</dd>
+        <dt>信箱</dt><dd>hello@example.com</dd>
+        <dt>地址</dt><dd>台北市○○區○○路 00 號（範例地址）</dd>
+        <dt>營業時間</dt><dd>週一至週五 10:00 – 19:00（採預約制）</dd>
+      </dl>
+    </div>
+    <form id="form" class="reveal" novalidate>
+      <div class="f"><label>姓名 <em>*</em></label><input name="name" required></div>
+      <div class="f"><label>聯絡電話 <em>*</em></label><input name="phone" type="tel" required></div>
+      <div class="f full"><label>電子信箱</label><input name="email" type="email"></div>
+      <div class="f full"><label>空間類型</label>
+        <div class="chips">
+          <label><input type="radio" name="type" value="新成屋" checked><span>新成屋</span></label>
+          <label><input type="radio" name="type" value="預售屋"><span>預售屋</span></label>
+          <label><input type="radio" name="type" value="老屋翻新"><span>老屋翻新</span></label>
+          <label><input type="radio" name="type" value="商業空間"><span>商業空間</span></label>
+        </div>
+      </div>
+      <div class="f"><label>坪數</label><input name="size" placeholder="例：30 坪"></div>
+      <div class="f"><label>預算範圍</label>
+        <select name="budget"><option>請選擇</option><option>100 萬以下</option><option>100 – 200 萬</option><option>200 – 400 萬</option><option>400 萬以上</option></select>
+      </div>
+      <div class="f full"><label>需求描述</label><textarea name="msg" placeholder="家庭成員、喜歡的風格、預計入住時間……"></textarea></div>
+      <label class="agree f full"><input type="checkbox" required> 我同意貴公司使用以上資料與我聯繫</label>
+      <div class="f full"><button class="btn" type="submit">送出預約</button></div>
+      <div class="ok" id="ok">感謝您的預約！這是示範網站，資料不會實際送出。</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+      <div>02-0000-0000　｜　hello@example.com</div>
+    </div>
+    <div class="copy">© 2026 好室設計 Good Interior Design · 示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash</div>
+  </div>
+</footer>
+
+<script src="../assets/site.js"></script>
+</body>
+</html>
