@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>好室設計 Good Interior Design</title>
+<meta name="description" content="好室設計｜住宅與商業空間室內設計，從丈量、規劃到施工監造一站完成。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;500;700&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#f6f3ee; --bg-alt:#ece6dd; --ink:#2b2824; --muted:#7a7268;
+    --line:#d8d0c4; --accent:#9a7b5b; --dark:#1f1d1a;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--ink);font-family:"Noto Sans TC",sans-serif;font-weight:300;line-height:1.9;letter-spacing:.04em}
+  img{display:block;width:100%;height:100%;object-fit:cover;color:transparent}
+  a{color:inherit;text-decoration:none}
+  .wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+  .serif{font-family:"Noto Serif TC",serif}
+  .en{font-family:"Cormorant Garamond",serif;letter-spacing:.2em;text-transform:uppercase;font-size:13px;color:var(--accent)}
+
+  /* header */
+  header{position:fixed;inset:0 0 auto 0;z-index:50;transition:background .4s,box-shadow .4s}
+  header.solid{background:rgba(246,243,238,.95);box-shadow:0 1px 0 var(--line);backdrop-filter:blur(8px)}
+  .nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+  .logo{display:flex;flex-direction:column;line-height:1.2}
+  .logo b{font-family:"Noto Serif TC",serif;font-weight:500;font-size:20px;letter-spacing:.3em}
+  .logo span{font-family:"Cormorant Garamond",serif;font-size:11px;letter-spacing:.35em;color:var(--muted)}
+  header:not(.solid) .logo, header:not(.solid) .menu a{color:#fff}
+  header:not(.solid) .logo span{color:rgba(255,255,255,.75)}
+  .menu{display:flex;gap:36px;font-size:14px}
+  .menu a{position:relative;padding:4px 0}
+  .menu a::after{content:"";position:absolute;left:0;bottom:0;width:0;height:1px;background:currentColor;transition:width .3s}
+  .menu a:hover::after{width:100%}
+  .burger{display:none;background:none;border:0;width:32px;height:24px;position:relative;cursor:pointer}
+  .burger i{position:absolute;left:0;right:0;height:1px;background:currentColor;transition:.3s}
+  .burger i:nth-child(1){top:4px}.burger i:nth-child(2){top:12px}.burger i:nth-child(3){top:20px}
+  header:not(.solid) .burger{color:#fff}
+
+  /* hero */
+  .hero{height:100vh;min-height:560px;position:relative;color:#fff;overflow:hidden;background:#3a342d}
+  .hero .slide{position:absolute;inset:0;opacity:0;transition:opacity 1.6s ease;transform:scale(1.06)}
+  .hero .slide.on{opacity:1;animation:zoom 8s ease forwards}
+  @keyframes zoom{to{transform:scale(1)}}
+  .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.35),rgba(0,0,0,.15) 40%,rgba(0,0,0,.45))}
+  .hero-text{position:absolute;z-index:2;left:0;right:0;bottom:16vh}
+  .hero h1{font-family:"Noto Serif TC",serif;font-weight:300;font-size:clamp(30px,5vw,56px);letter-spacing:.25em;line-height:1.5}
+  .hero p{margin-top:16px;font-size:15px;opacity:.9;max-width:480px}
+  .hero .en{color:rgba(255,255,255,.8);display:block;margin-bottom:18px}
+  .dots{position:absolute;z-index:2;right:24px;bottom:40px;display:flex;gap:10px}
+  .dots button{width:28px;height:2px;border:0;background:rgba(255,255,255,.4);cursor:pointer}
+  .dots button.on{background:#fff}
+
+  /* sections */
+  section{padding:120px 0}
+  .head{margin-bottom:56px}
+  .head h2{font-family:"Noto Serif TC",serif;font-weight:500;font-size:clamp(24px,3vw,32px);letter-spacing:.2em;margin-top:6px}
+  .head.center{text-align:center}
+  .btn{display:inline-flex;align-items:center;gap:14px;border:1px solid var(--ink);padding:14px 34px;font-size:14px;letter-spacing:.2em;transition:.3s;background:none;color:var(--ink);cursor:pointer;font-family:inherit}
+  .btn:hover{background:var(--ink);color:var(--bg)}
+  .btn::after{content:"→";transition:transform .3s}
+  .btn:hover::after{transform:translateX(4px)}
+
+  /* about */
+  .about{display:grid;grid-template-columns:1.1fr 1fr;gap:80px;align-items:center}
+  .about .pic{aspect-ratio:4/5;background:var(--bg-alt);position:relative}
+  .about .pic::before{content:"";position:absolute;inset:24px -24px -24px 24px;border:1px solid var(--line);z-index:-1}
+  .about p{color:var(--muted);margin-bottom:20px}
+  .about blockquote{font-family:"Noto Serif TC",serif;font-size:22px;line-height:1.8;color:var(--ink);margin-bottom:28px;letter-spacing:.12em}
+  .stats{display:flex;gap:48px;margin:36px 0 40px;padding-top:28px;border-top:1px solid var(--line)}
+  .stats b{display:block;font-family:"Cormorant Garamond",serif;font-size:42px;font-weight:400;line-height:1;color:var(--ink)}
+  .stats span{font-size:13px;color:var(--muted)}
+
+  /* works */
+  .works{background:var(--bg-alt)}
+  .filters{display:flex;gap:28px;justify-content:center;margin-bottom:48px;font-size:14px;flex-wrap:wrap}
+  .filters button{background:none;border:0;font:inherit;color:var(--muted);cursor:pointer;padding:4px 0;border-bottom:1px solid transparent;letter-spacing:.15em}
+  .filters button.on{color:var(--ink);border-color:var(--ink)}
+  .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:28px}
+  .card{cursor:pointer}
+  .card .img{aspect-ratio:4/3;overflow:hidden;background:#cfc6b8}
+  .card img{transition:transform 1s ease}
+  .card:hover img{transform:scale(1.05)}
+  .card h3{font-family:"Noto Serif TC",serif;font-weight:500;font-size:17px;margin-top:18px;letter-spacing:.15em}
+  .card small{color:var(--muted);font-size:13px}
+  .card.hide{display:none}
+
+  /* services */
+  .svc{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+  .svc div{padding:48px 36px;border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+  .svc div:nth-child(3n){border-right:0}
+  .svc .num{font-family:"Cormorant Garamond",serif;font-size:15px;color:var(--accent);letter-spacing:.2em}
+  .svc h3{font-family:"Noto Serif TC",serif;font-weight:500;font-size:19px;margin:12px 0;letter-spacing:.15em}
+  .svc p{font-size:14px;color:var(--muted)}
+
+  /* process */
+  .process{background:var(--dark);color:#e9e3d9}
+  .process .head h2{color:#fff}
+  .steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+  .steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1px;background:rgba(255,255,255,.2)}
+  .step{text-align:center;padding:0 10px;position:relative}
+  .step i{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 20px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:var(--dark);font-style:normal;font-family:"Cormorant Garamond",serif;font-size:18px}
+  .step h4{font-family:"Noto Serif TC",serif;font-weight:500;letter-spacing:.15em;margin-bottom:6px}
+  .step p{font-size:13px;color:rgba(233,227,217,.65)}
+
+  /* contact */
+  .contact{display:grid;grid-template-columns:1fr 1.3fr;gap:80px}
+  .info dl{margin-top:24px}
+  .info dt{font-size:12px;color:var(--accent);letter-spacing:.25em;margin-top:22px}
+  .info dd{font-size:15px}
+  form{display:grid;grid-template-columns:1fr 1fr;gap:26px 28px}
+  .f{display:flex;flex-direction:column}
+  .f.full{grid-column:1/-1}
+  label{font-size:13px;color:var(--muted);margin-bottom:6px;letter-spacing:.12em}
+  label em{color:var(--accent);font-style:normal}
+  input,select,textarea{font:inherit;color:var(--ink);background:transparent;border:0;border-bottom:1px solid var(--line);padding:10px 2px;outline:0;transition:border-color .3s;border-radius:0}
+  input:focus,select:focus,textarea:focus{border-color:var(--ink)}
+  textarea{resize:vertical;min-height:110px}
+  .chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:4px}
+  .chips label{margin:0}
+  .chips input{display:none}
+  .chips span{display:inline-block;border:1px solid var(--line);padding:6px 16px;font-size:13px;cursor:pointer;transition:.2s;color:var(--ink)}
+  .chips input:checked+span{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+  .agree{font-size:13px;color:var(--muted);display:flex;flex-direction:row!important;gap:8px;align-items:center}
+  .agree input{width:auto}
+  .ok{display:none;grid-column:1/-1;padding:18px 22px;background:var(--bg-alt);border-left:2px solid var(--accent);font-size:14px}
+
+  footer{background:var(--dark);color:rgba(233,227,217,.6);font-size:13px;padding:56px 0 36px}
+  .foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap;align-items:flex-end}
+  footer .logo b{color:#fff}
+  .copy{margin-top:36px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);font-size:12px}
+
+  .reveal{opacity:0;transform:translateY(30px);transition:opacity 1s ease,transform 1s ease}
+  .reveal.in{opacity:1;transform:none}
+
+  /* modal */
+  .modal{position:fixed;inset:0;background:rgba(20,18,16,.92);z-index:100;display:none;align-items:center;justify-content:center;padding:24px}
+  .modal.on{display:flex}
+  .modal figure{max-width:1000px;width:100%;color:#eee}
+  .modal img{max-height:72vh;object-fit:contain;background:#000}
+  .modal figcaption{margin-top:16px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+  .modal figcaption b{font-family:"Noto Serif TC",serif;font-weight:500;letter-spacing:.15em}
+  .modal .x{position:absolute;top:20px;right:24px;background:none;border:0;color:#fff;font-size:30px;cursor:pointer;font-weight:200}
+
+  @media (max-width:900px){
+    section{padding:80px 0}
+    .menu{position:fixed;inset:76px 0 auto 0;background:var(--bg);flex-direction:column;gap:0;padding:12px 24px 24px;display:none;box-shadow:0 10px 20px rgba(0,0,0,.06)}
+    .menu.open{display:flex}
+    .menu a{color:var(--ink)!important;padding:14px 0;border-bottom:1px solid var(--line)}
+    .burger{display:block}
+    .about,.contact{grid-template-columns:1fr;gap:56px}
+    .about .pic::before{inset:16px -12px -16px 12px}
+    .grid,.svc{grid-template-columns:1fr 1fr}
+    .svc div:nth-child(3n){border-right:1px solid var(--line)}
+    .svc div:nth-child(2n){border-right:0}
+    .steps{grid-template-columns:repeat(3,1fr);row-gap:40px}
+    .steps::before{display:none}
+  }
+  @media (max-width:560px){
+    .grid,.svc,form{grid-template-columns:1fr}
+    .svc div{border-right:0!important;padding:36px 4px}
+    .steps{grid-template-columns:repeat(2,1fr)}
+    .stats{gap:28px}
+  }
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a href="#" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+    <nav class="menu" id="menu">
+      <a href="#about">關於我們</a>
+      <a href="#works">作品集</a>
+      <a href="#services">服務項目</a>
+      <a href="#process">設計流程</a>
+      <a href="#contact">聯絡我們</a>
+    </nav>
+    <button class="burger" id="burger" aria-label="選單"><i></i><i></i><i></i></button>
+  </div>
+</header>
+
+<div class="hero" id="hero">
+  <div class="slide on"><img src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=2000&q=80" alt=""></div>
+  <div class="slide"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=2000&q=80" alt=""></div>
+  <div class="slide"><img src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&w=2000&q=80" alt=""></div>
+  <div class="wrap hero-text">
+    <span class="en">Live well, live simply</span>
+    <h1>以光為筆<br>為生活留白</h1>
+    <p>從生活習慣出發，打造安靜、耐看、能陪你走很久的家。</p>
+  </div>
+  <div class="dots" id="dots"><button class="on" aria-label="第 1 張"></button><button aria-label="第 2 張"></button><button aria-label="第 3 張"></button></div>
+</div>
+
+<section id="about">
+  <div class="wrap about">
+    <div class="pic reveal"><img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="明亮的客廳空間"></div>
+    <div class="reveal">
+      <div class="head"><span class="en">About us</span><h2>關於好室</h2></div>
+      <blockquote>「好的空間不需要喧嘩，<br>它只是讓日子變得更好過。」</blockquote>
+      <p>好室設計由一群建築與室內背景的設計師組成。我們相信設計的起點是「人」——你怎麼起床、在哪裡看書、孩子在哪裡寫功課、家人如何相聚。</p>
+      <p>我們以自然材質、溫潤色調與充足的採光為核心，並全程掌握預算與工期，讓裝修不再是一場冒險。</p>
+      <div class="stats">
+        <div><b>12</b><span>年設計經驗</span></div>
+        <div><b>380+</b><span>完成案件</span></div>
+        <div><b>98%</b><span>屋主推薦率</span></div>
+      </div>
+      <a href="#contact" class="btn">預約諮詢</a>
+    </div>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="wrap">
+    <div class="head center reveal"><span class="en">Portfolio</span><h2>精選作品</h2></div>
+    <div class="filters reveal" id="filters">
+      <button class="on" data-f="all">全部</button>
+      <button data-f="new">新成屋</button>
+      <button data-f="old">老屋翻新</button>
+      <button data-f="biz">商業空間</button>
+    </div>
+    <div class="grid" id="grid">
+      <div class="card reveal" data-c="new"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>暖木之境</h3><small>新成屋｜台北大安｜42 坪</small></div>
+      <div class="card reveal" data-c="old"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>光的回聲</h3><small>老屋翻新｜新北永和｜30 坪</small></div>
+      <div class="card reveal" data-c="new"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1600573472550-8090b5e0745e?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>靜謐日常</h3><small>新成屋｜桃園青埔｜35 坪</small></div>
+      <div class="card reveal" data-c="biz"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>白日工作室</h3><small>商業空間｜台北信義｜60 坪</small></div>
+      <div class="card reveal" data-c="old"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>餐桌上的家</h3><small>老屋翻新｜台中西區｜28 坪</small></div>
+      <div class="card reveal" data-c="biz"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1554118811-1e0d58224f24?auto=format&fit=crop&w=1000&q=80" alt=""></div><h3>午後咖啡</h3><small>商業空間｜台南中西區｜25 坪</small></div>
+    </div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <div class="head reveal"><span class="en">Services</span><h2>服務項目</h2></div>
+    <div class="svc reveal">
+      <div><span class="num">01</span><h3>住宅空間設計</h3><p>新成屋、預售屋客變，依家庭成員與生活動線量身規劃。</p></div>
+      <div><span class="num">02</span><h3>老屋翻新</h3><p>水電管線更新、結構補強、防水處理，讓老房子重新呼吸。</p></div>
+      <div><span class="num">03</span><h3>商業空間規劃</h3><p>辦公室、餐飲、零售店面，兼顧品牌調性與營運效率。</p></div>
+      <div><span class="num">04</span><h3>系統櫃與訂製家具</h3><p>依空間尺寸訂製收納與家具，每一公分都用得剛好。</p></div>
+      <div><span class="num">05</span><h3>軟裝陳設</h3><p>燈具、窗簾、家飾與植栽搭配，完成空間最後一哩路。</p></div>
+      <div><span class="num">06</span><h3>工程監造</h3><p>專人駐點管理，每週回報進度，確保品質與工期。</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="process" id="process">
+  <div class="wrap">
+    <div class="head center reveal"><span class="en">Process</span><h2>設計流程</h2></div>
+    <div class="steps reveal">
+      <div class="step"><i>01</i><h4>初步諮詢</h4><p>了解需求、預算與期待</p></div>
+      <div class="step"><i>02</i><h4>現場丈量</h4><p>實地勘查與屋況評估</p></div>
+      <div class="step"><i>03</i><h4>平面規劃</h4><p>提出配置與動線方案</p></div>
+      <div class="step"><i>04</i><h4>3D 模擬</h4><p>材質、色彩與立面確認</p></div>
+      <div class="step"><i>05</i><h4>施工監造</h4><p>工程管理與進度回報</p></div>
+      <div class="step"><i>06</i><h4>完工交屋</h4><p>驗收、清潔與保固服務</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="info reveal">
+      <div class="head"><span class="en">Contact</span><h2>聯絡我們</h2></div>
+      <p style="color:var(--muted)">留下您的需求，設計顧問將於兩個工作天內與您聯繫，安排免費初步諮詢。</p>
+      <dl>
+        <dt>電話</dt><dd>02-0000-0000</dd>
+        <dt>信箱</dt><dd>hello@example.com</dd>
+        <dt>地址</dt><dd>台北市○○區○○路 00 號（範例地址）</dd>
+        <dt>營業時間</dt><dd>週一至週五 10:00 – 19:00（採預約制）</dd>
+      </dl>
+    </div>
+    <form id="form" class="reveal" novalidate>
+      <div class="f"><label>姓名 <em>*</em></label><input name="name" required></div>
+      <div class="f"><label>聯絡電話 <em>*</em></label><input name="phone" type="tel" required></div>
+      <div class="f full"><label>電子信箱</label><input name="email" type="email"></div>
+      <div class="f full"><label>空間類型</label>
+        <div class="chips">
+          <label><input type="radio" name="type" value="新成屋" checked><span>新成屋</span></label>
+          <label><input type="radio" name="type" value="預售屋"><span>預售屋</span></label>
+          <label><input type="radio" name="type" value="老屋翻新"><span>老屋翻新</span></label>
+          <label><input type="radio" name="type" value="商業空間"><span>商業空間</span></label>
+        </div>
+      </div>
+      <div class="f"><label>坪數</label><input name="size" placeholder="例：30 坪"></div>
+      <div class="f"><label>預算範圍</label>
+        <select name="budget"><option>請選擇</option><option>100 萬以下</option><option>100 – 200 萬</option><option>200 – 400 萬</option><option>400 萬以上</option></select>
+      </div>
+      <div class="f full"><label>需求描述</label><textarea name="msg" placeholder="家庭成員、喜歡的風格、預計入住時間……"></textarea></div>
+      <label class="agree f full"><input type="checkbox" required> 我同意貴公司使用以上資料與我聯繫</label>
+      <div class="f full"><button class="btn" type="submit">送出預約</button></div>
+      <div class="ok" id="ok">感謝您的預約！這是示範網站，資料不會實際送出。</div>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a href="#" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+      <div>02-0000-0000　｜　hello@example.com</div>
+    </div>
+    <div class="copy">© 2026 好室設計 Good Interior Design · 示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash</div>
+  </div>
+</footer>
+
+<div class="modal" id="modal"><button class="x" aria-label="關閉">×</button><figure><img alt=""><figcaption><b></b><span></span></figcaption></figure></div>
+
+<script>
+  const header=document.getElementById('top');
+  const onScroll=()=>header.classList.toggle('solid',scrollY>40);
+  addEventListener('scroll',onScroll);onScroll();
+
+  const menu=document.getElementById('menu');
+  document.getElementById('burger').onclick=()=>{menu.classList.toggle('open');header.classList.add('solid')};
+  menu.querySelectorAll('a').forEach(a=>a.onclick=()=>menu.classList.remove('open'));
+
+  // hero slider
+  const slides=[...document.querySelectorAll('.hero .slide')],dots=[...document.querySelectorAll('#dots button')];
+  let cur=0,timer;
+  const go=i=>{slides[cur].classList.remove('on');dots[cur].classList.remove('on');cur=i;slides[cur].classList.add('on');dots[cur].classList.add('on')};
+  const auto=()=>{clearInterval(timer);timer=setInterval(()=>go((cur+1)%slides.length),6000)};
+  dots.forEach((d,i)=>d.onclick=()=>{go(i);auto()});auto();
+
+  // reveal on scroll
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+  // portfolio filter
+  const fb=[...document.querySelectorAll('#filters button')],cards=[...document.querySelectorAll('.card')];
+  fb.forEach(b=>b.onclick=()=>{fb.forEach(x=>x.classList.toggle('on',x===b));cards.forEach(c=>c.classList.toggle('hide',b.dataset.f!=='all'&&c.dataset.c!==b.dataset.f))});
+
+  // lightbox
+  const modal=document.getElementById('modal');
+  cards.forEach(c=>c.onclick=()=>{
+    modal.querySelector('img').src=c.querySelector('img').src.replace('w=1000','w=1800');
+    modal.querySelector('b').textContent=c.querySelector('h3').textContent;
+    modal.querySelector('span').textContent=c.querySelector('small').textContent;
+    modal.classList.add('on');
+  });
+  modal.onclick=e=>{if(e.target===modal||e.target.classList.contains('x'))modal.classList.remove('on')};
+  addEventListener('keydown',e=>{if(e.key==='Escape')modal.classList.remove('on')});
+
+  // form (demo only)
+  document.getElementById('form').onsubmit=e=>{
+    e.preventDefault();
+    const f=e.target;
+    if(!f.checkValidity()){f.reportValidity();return}
+    document.getElementById('ok').style.display='block';
+    f.querySelector('button[type=submit]').disabled=true;
+  };
+</script>
+</body>
+</html>
