@@ -4,17 +4,16 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>關於我們｜好室設計</title>
-<meta name="description" content="認識好室設計的理念、流程與團隊。">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=LXGW+WenKai+TC:wght@300;400;700&family=Noto+Sans+TC:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/style.css">
 </head>
-<body>
+<body data-page-title="關於我們">
 
 <header id="top">
   <div class="wrap nav">
-    <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
+    <a href="../" class="logo" data-logo></a>
     <nav class="menu" id="menu">
       <a href="../product/">作品與服務</a>
       <a href="../about/" class="active">關於我們</a>
@@ -27,7 +26,7 @@
 </header>
 
 <div class="banner">
-  <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=2000&q=80" alt="">
+  <img data-banner="about" alt="">
   <div class="wrap">
     <span class="en">About us</span>
     <h1>關於我們</h1>
@@ -37,17 +36,12 @@
 
 <section>
   <div class="wrap about">
-    <div class="pic reveal"><img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=80" alt="明亮的客廳空間"></div>
+    <div class="pic reveal" id="about-img"></div>
     <div class="reveal">
-      <div class="head"><span class="en">Our story</span><h2>關於好室</h2></div>
-      <blockquote>「好的空間不需要喧嘩，<br>它只是讓日子變得更好過。」</blockquote>
-      <p>好室設計由一群建築與室內背景的設計師組成。我們相信設計的起點是「人」——你怎麼起床、在哪裡看書、孩子在哪裡寫功課、家人如何相聚。</p>
-      <p>我們以自然材質、溫潤色調與充足的採光為核心，並全程掌握預算與工期，讓裝修不再是一場冒險。</p>
-      <div class="stats">
-        <div><b>12</b><span>年設計經驗</span></div>
-        <div><b>380+</b><span>完成案件</span></div>
-        <div><b>98%</b><span>屋主推薦率</span></div>
-      </div>
+      <div class="head"><span class="en">Our story</span><h2>關於<span data-bind="brand.name"></span></h2></div>
+      <blockquote data-bind="about.quote"></blockquote>
+      <div id="about-text"></div>
+      <div class="stats" id="stats"></div>
     </div>
   </div>
 </section>
@@ -55,25 +49,14 @@
 <section class="process">
   <div class="wrap">
     <div class="head center reveal"><span class="en">Process</span><h2>設計流程</h2></div>
-    <div class="steps reveal">
-      <div class="step"><i>01</i><h4>初步諮詢</h4><p>了解需求、預算與期待</p></div>
-      <div class="step"><i>02</i><h4>現場丈量</h4><p>實地勘查與屋況評估</p></div>
-      <div class="step"><i>03</i><h4>平面規劃</h4><p>提出配置與動線方案</p></div>
-      <div class="step"><i>04</i><h4>3D 模擬</h4><p>材質、色彩與立面確認</p></div>
-      <div class="step"><i>05</i><h4>施工監造</h4><p>工程管理與進度回報</p></div>
-      <div class="step"><i>06</i><h4>完工交屋</h4><p>驗收、清潔與保固服務</p></div>
-    </div>
+    <div class="steps reveal" id="steps"></div>
   </div>
 </section>
 
 <section>
   <div class="wrap">
     <div class="head center reveal"><span class="en">Team</span><h2>設計團隊</h2></div>
-    <div class="team">
-      <div class="member reveal"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=700&q=80" alt=""></div><h3>林以安</h3><small>創辦人／設計總監</small><p>建築系畢業，十二年住宅設計經驗，擅長採光與動線規劃。</p></div>
-      <div class="member reveal"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=700&q=80" alt=""></div><h3>陳思妤</h3><small>資深設計師</small><p>專注老屋翻新，熟悉結構補強與防水工法。</p></div>
-      <div class="member reveal"><div class="img"><img loading="lazy" src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?auto=format&fit=crop&w=700&q=80" alt=""></div><h3>黃柏宇</h3><small>工程主任</small><p>負責現場監造與工班協調，確保每個細節如圖施作。</p></div>
-    </div>
+    <div class="team" id="team"></div>
   </div>
 </section>
 
@@ -88,10 +71,10 @@
 <footer>
   <div class="wrap">
     <div class="foot">
-      <a href="../" class="logo"><b>好室設計</b><span>GOOD INTERIOR</span></a>
-      <div>02-0000-0000　｜　hello@example.com</div>
+      <a href="../" class="logo" data-logo></a>
+      <div><span data-bind="contact.phone"></span>　｜　<span data-bind="contact.email"></span></div>
     </div>
-    <div class="copy">© 2026 好室設計 Good Interior Design · 示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash</div>
+    <div class="copy">© <span data-year></span> <span data-bind="brand.fullName"></span> · <span data-bind="brand.footer"></span></div>
   </div>
 </footer>
 

@@ -88,7 +88,7 @@ section{padding:120px 0}
 /* process */
 .process{background:var(--dark);color:#e9e3d9}
 .process .head h2{color:#fff}
-.steps{display:grid;grid-template-columns:repeat(6,1fr);gap:0;position:relative}
+.steps{display:grid;grid-template-columns:repeat(var(--n,6),1fr);gap:0;position:relative}
 .steps::before{content:"";position:absolute;top:28px;left:8%;right:8%;height:1px;background:rgba(255,255,255,.2)}
 .step{text-align:center;padding:0 10px;position:relative}
 .step i{display:flex;align-items:center;justify-content:center;width:56px;height:56px;margin:0 auto 20px;border:1px solid rgba(255,255,255,.35);border-radius:50%;background:var(--dark);font-style:normal;font-family:"Playfair Display",serif;font-size:18px}
@@ -220,3 +220,8 @@ footer .logo b{color:#fff}
 @media (max-width:560px){
   .team,.posts{grid-template-columns:1fr}
 }
+
+/* ---- content-driven additions ---- */
+.logo img{height:44px;width:auto;object-fit:contain}
+.preview-badge{position:fixed;left:50%;bottom:20px;transform:translateX(-50%);z-index:200;background:var(--accent);color:#fff;font-size:13px;padding:8px 18px;letter-spacing:.1em;box-shadow:0 6px 20px rgba(0,0,0,.2)}
+.teaser{display:block}
