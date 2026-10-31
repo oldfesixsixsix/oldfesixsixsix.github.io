@@ -1,16 +1,16 @@
 {
   "brand": {
-    "name": "好室設計",
+    "name": "固得室內裝修",
     "en": "GOOD INTERIOR",
-    "logo": "",
-    "fullName": "好室設計 Good Interior Design",
+    "logo": "uploads/1793461677075-1000007836.jpg",
+    "fullName": "固得室內裝修 Good Interior Design",
     "footer": "示範網站，品牌與內容皆為虛構 · 圖片來源 Unsplash"
   },
   "contact": {
     "phone": "02-0000-0000",
     "email": "hello@example.com",
-    "address": "台北市○○區○○路 00 號（範例地址）",
-    "hours": "週一至週五 10:00 – 19:00（採預約制）",
+    "address": "970花蓮縣花蓮市主睦里仁愛街46號",
+    "hours": "週一至週五 10:00 – 19:00",
     "intro": "留下您的需求，設計顧問將於兩個工作天內與您聯繫，安排免費初步諮詢。"
   },
   "home": {
